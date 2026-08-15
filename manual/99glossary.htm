@@ -1,0 +1,2451 @@
+
+<html>
+
+<head>
+<!-- Search JavaScript Must Copy -->
+<script>
+var TRange = null;
+var dupeRange = null;
+var TestRange = null;
+var win = null;
+var nom = navigator.appName.toLowerCase();
+var agt = navigator.userAgent.toLowerCase();
+var is_major   = parseInt(navigator.appVersion);
+var is_minor   = parseFloat(navigator.appVersion);
+var is_ie      = (agt.indexOf("msie") != -1);
+var is_ie4up   = (is_ie && (is_major >= 4));
+var is_not_moz = (agt.indexOf('netscape')!=-1)
+var is_nav     = (nom.indexOf('netscape')!=-1);
+var is_nav4    = (is_nav && (is_major == 4));
+var is_mac     = (agt.indexOf("mac")!=-1);
+var is_gecko   = (agt.indexOf('gecko') != -1);
+var is_opera   = (agt.indexOf("opera") != -1);
+var is_rev=0
+if (is_gecko) {
+temp = agt.split("rv:")
+is_rev = parseFloat(temp[1])
+}
+var frametosearch = self;
+function search(whichform, whichframe) {
+if (is_ie4up && is_mac) return;
+if (is_gecko && (is_rev <1)) return;
+if (is_opera) return;
+if(whichform.findthis.value!=null && whichform.findthis.value!='') {
+       str = whichform.findthis.value;
+       win = whichframe;
+       var frameval=false;
+       if(win!=self)
+{
+       frameval=true;
+       win = parent.frames[whichframe];
+}    
+}
+else return;  
+var strFound;
+if(is_nav4 && (is_minor < 5)) {
+   
+  strFound=win.find(str);
+        }
+if (is_gecko && (is_rev >= 1)) {
+   
+    if(frameval!=false) win.focus();
+    strFound=win.find(str, false, false, true, false, frameval, false);
+    if (is_not_moz)  whichform.findthis.focus();
+}
+ if (is_ie4up) {
+  if (TRange!=null) {
+   TestRange=win.document.body.createTextRange();
+   if (dupeRange.inRange(TestRange)) {
+   TRange.collapse(false);
+   strFound=TRange.findText(str);
+    if (strFound) {
+        win.document.body.scrollTop = win.document.body.scrollTop + TRange.offsetTop;
+        TRange.select();
+        }
+   }
+   else {
+
+     TRange=win.document.body.createTextRange();
+     TRange.collapse(false);
+     strFound=TRange.findText(str);
+     if (strFound) {
+        win.document.body.scrollTop = TRange.offsetTop;
+        TRange.select();
+        }
+   }
+  }
+   if (TRange==null || strFound==0) {
+   TRange=win.document.body.createTextRange();
+   dupeRange = TRange.duplicate();
+   strFound=TRange.findText(str);
+    if (strFound) {
+        win.document.body.scrollTop = TRange.offsetTop;
+        TRange.select();
+        }
+   }
+ }
+  if (!strFound) alert ("The word or words containing '"+str+"' were not found! Please try again")       
+}
+</script>
+<!-- Search JavaScript Copy End Here -->
+<!-- Search Form Must Copy -->
+<form name="form1" onSubmit="search(document.form1, frametosearch); return false">
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+
+<title>Clearbird - Glossary: An alphabetical list of all the special words used in ST.</title>
+<base target="_self">
+<style fprolloverstyle>A:hover {color: #CC0066; font-weight: bold}
+</style>
+</head>
+
+<body background="../pictures/clearbirdbkg3.gif" text="#000000" leftmargin="30" link="#000080" vlink="#000080">
+
+
+
+<!-- Search Form Copy End Here -->
+
+
+
+<font size="5">
+
+
+
+<div align="center">
+  <center>
+  <table border="0" cellpadding="4" cellspacing="0" width="100%" bgcolor="#FFDB48">
+    <tr>
+      <td width="7%" bgcolor="#FFFFFF">
+        <p align="center"><a href="../index.htm" target="_top"><img border="0" src="../pictures/0cbird_free2.gif" width="43" height="58"></a></td>
+    </font>
+      <td width="93%" valign="middle" align="center" bordercolor="#FFCC99">
+        <p align="center">
+
+<font face="Tempo HeavyCondensed" color="#0000AA"><u><font size="6"><b>Main <a name="GLOSS">Glossary</a> </b> </font></u><font size="6"><br>
+</font></font><font face="Tempo HeavyCondensed" size="5" color="#0000AA"> with
+Abbreviations</font></td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+
+
+<p><a href="904definitions.htm#CS1"><font face="Arial" size="1">See
+                also:&nbsp; Basic&nbsp;Definitions for PCs</font></a></p>
+
+
+
+<p align="center">
+
+<font face="Tempo HeavyCondensed" size="6" color="#0000BF"><a name="top"></a></font><font face="Arial Narrow" size="2">To find entry quickly, type word followed&nbsp;<br>
+by colon [:]. Example, Bank:, Auditing:&nbsp;<br>
+Use 'ENTER' or 'ALT S' keys&nbsp; to find next.<br>
+</font>
+
+  <input type="text" name="findthis" size="15" title="Press 'ALT s' after clicking submit to repeatedly search page"> 
+  <input type="submit" value="search glossary" accesskey="s">
+</form>
+ &nbsp;<br>
+</p>
+
+
+
+<p align="center">
+
+<font face="Arial" size="3"><b><a href="#A">
+
+A
+</a> 
+
+ <a href="#B">B</a> <a href="#C">C</a>
+<a href="#D">D</a> <a href="#E">E</a> <a href="#F">F</a> <a href="#G">G</a> <a href="#H">H</a>
+<a href="#I">I</a> <a href="#J">J</a>  <a href="#K">K</a> <a href="#L">L</a> <a href="#M">M</a>
+<a href="#N">N</a> <a href="#O">O</a> <a href="#P">P</a> <a href="#Q">Q</a> <a href="#R">R</a>
+<a href="#S">S</a> <a href="#T">T</a> <a href="#U">U</a> <a href="#V">V</a> <a href="#W">W</a>&nbsp;
+<font color="#000080">X <a href="#Y"> Y</a> Z</font></b></font>
+</p>
+<p align="center">
+
+&nbsp;
+</p>
+<p>
+
+<font face="Arial" size="2"><b>ABBREVIATIONS LIST</b></font>
+</p>
+<p>
+
+<font face="Arial" size="2">
+
+ACC: Advanced Clinical Course
+<br>AESP: Attitudes, emotions, sensations, pains
+<br>ARCU: Affinity, reality, communication, understanding
+<br>ARC-X: (ARCX:) ARC break
+<br>CDEINR: Curious, desired, enforce, inhibit, no, refuse
+<br>ARF: Auditors report form
+<br>AT:&nbsp; Antagonistic Terminal<br>
+BD: Blowdown
+<br>BER: Bad exam report<br>
+BI's: (BI: BIs:) Bad indicators (on pc)
+<br>BPC: By-passed Charge
+<br>C&amp;A:&nbsp; Certificates and awards
+<br>CC: Clearing Course
+<br>CL: Class (level)
+<br>Class Chart: Classification chart
+<br>Cog: Cognition
+<br>Comm Cycle: Communication cycle
+<br>C/S: (CS:) Case supervisor:, case supervision, Case supervisor's written
+instruction<br>
+Demo: Demonstration
+<br>D of P: Director of Processing
+<br>Dn: Dianetics™
+<br>DN: Dirty Needle
+<br>DR: Dirty Read
+<br>DYN: Dynamics
+<br>E/S: ES: Earlier similar
+<br>EP: End phenomena
+<br>E/O: EO: Ethics Officer
+<br>EXT: Exterior or exteriorization
+<br>F: Fall, flow
+<br>HAV: Havingness
+<br>FES: Folder Error Summary
+<br>FS: Folder Summary
+<br>FL: Flow
+<br>F/N: FN: Floating needle
+<br>FFT: Full Flow Table
+<br>GAE: Gross Auditing Error
+<br>GF: Green form
+<br>GI's: GI: GIs:&nbsp; Good indicators
+<br>GR: Grade
+<br>
+HF: Health form
+<br>HE&amp;R: Human emotion and reaction
+<br>HCOB:&nbsp; Hubbard Communications Office Bulletin, technical paper.
+<br>HGC:&nbsp; Hubbard Guidance Center<br>
+Inval: Invalidation
+<br>INT RD: Exteriorization/Interiorization Rundown<br>
+L1C: Repair List for upset pc's<br>
+L4 Short: L4: Repair List for L&amp;N actions<br>
+L4RB: Long Repair List for L&amp;N actions<br>
+LCRE: Confessional Repair List<br>
+LF: Long fall
+<br>LFBD: Long fall Blowdown
+<br>L&amp;N: Listing and nulling
+<br>LRH: Lafayette Ron Hubbard.
+<br>MO: Medical officer<br>
+MU: Misunderstood word or symbol
+<br>MWH: (M/W/H:) Missed withhold
+<br>O/R: (OR:) Overrun
+<br>OT: Operating thetan
+<br>Pn: Pain
+<br>PC: Preclear
+<br>PR: Public relations
+<br>Pro: Professional
+<br>PTP: Present time problem
+<br>PT: Present time
+<br>PTS: Potential trouble source
+<br>Q&amp;A: Question and Answer
+<br>R3RA: Routine 3 Revised-A
+<br>REHAB: Rehabilitate/rehabilitation
+<br>Restim: Restimulation
+<br>RR: (R/R:) Rocket read
+<br>RS: (R/S:) Rock slam
+<br>R/S item: Rock slam item
+<br>RUDS: Rudiments
+<br>SCN: Scientologie
+<br>SF: Small Fall
+<br>SH: Saint Hill
+<br>SHSBC: Saint Hill Special Briefing Course
+<br>SOM: Somatic
+<br>SP: Suppressive person<br>
+ST: Standard Clearing Technology
+<br>SUPP: Suppress
+<br>TECH: Technology or technical
+<br>TA: Tone Arm or Tone arm action
+<br>TR: (TRs: TRs:) Training Routine<br>
+TWC: (2WC:) Two-way communication
+<br>VBI: Very bad indicators<br>
+VGI: Very good indicators<br>
+WCCL: Word Clearing Correction List
+<br>W/H: (WH:) Withhold
+<br>&nbsp;
+</font>
+</p>
+<p>
+
+<font face="Arial" size="1"><a href="#top">Top</a></font>
+
+<font face="Arial" size="2">
+
+<br>&nbsp;
+<br><a name="DEFINITIONS">DEFINITIONS</a>
+</font>
+</p>
+<p>
+<font face="Arial" size="2">
+<br><a name="A">A</a>:
+</font></p>
+<p>
+<font face="Arial" size="1"><a href="#top">Top</a></font>
+<font face="Arial" size="2">
+<br><br>
+
+   
+<a name="A=A=A">A=A=A</a>=A: Anything
+equals anything equals anything. This is the way the Reactive Mind thinks,
+irrationally identifying thoughts, people, objects, experiences, statements,
+etc., with one another where little or no similarity actually exists. Example:
+Mr. X looks at a horse, knows it's a house, knows it's a school teacher, so
+when he sees a horse he is respectful. This is the behavior of the Reactive Mind. Everything is identified with everything on a certain subject.</font></p>
+<font size="2">
+Aberration:
+
+<a name="Aberration"></a>
+<br>is a departure from rational thought or behavior. From the Latin, &quot;aberrare&quot;, to wander from, Latin &quot;ab&quot;, away, &quot;errare&quot;,
+to wander. It means basically to err, to make mistakes, or more specifically to have
+fixed ideas which are not true. The word is also used in its scientific sense. It means departure from a straight line. If a line should go from
+A to B, then if it is &quot;aberrated&quot;, would go from A to some other point, to some other point, to some other point, to some other point, to
+some other point, and finally arrive at B. Taken in its scientific sense, it would also mean the lack of straightness or to see crookedly.
+<br>
+ 
+  
+</font>
+<p><font face="Arial" size="2"><a name="Academy">Academy</a>:
+<br>That area of the Technical Division in which courses and training are delivered.</font></p>
+ 
+  
+<p><font face="Arial" size="2"><a name="Additive">Additive</a>:
+<br>a thing which has been added. This usually has a bad meaning in that an &quot;additive&quot; is said to be something needless or harmful which has
+been done in addition to standard procedure. &quot;Additive&quot; normally means a
+departure from standard procedure.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Admin">Admin</a>: (Administration:)
+<br>A contraction or shortening of the word &quot;administration&quot;.
+&quot;Admin&quot; is used as a noun to denote the actions involved in &quot;administrating&quot;
+an organization. The clerical and executive decisions, actions and duties necessary to the running of an organization such as originating and
+answering mail, typing, filing, sending memos and emails, applying policy, and all
+those actions, large and small, that make up an organization.&nbsp;</font></p>
+ 
+
+ 
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+ 
+
+ 
+<p><font face="Arial" size="2">Admin: (in auditing) is also used about the action or fact of keeping auditor's reports,
+summary reports, worksheets and other records related to an auditing session. &quot;He kept good &quot;admin&quot;&quot; meaning that his summary
+report, auditor's report and worksheets were neat, exactly on pattern, in proper
+sequence and easily understood, as well as complete.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Affinity">Affinity</a>:
+<br> Degree of liking or affection or lack of it. Affinity is a
+tolerance of distance. A great affinity makes you feel 'close' to somebody or
+something. It's a tolerance of or liking of closeness or close proximity. A lack
+of affinity would be an intolerance of or dislike of closeness. Affinity is one
+of the components of understanding, the other components are reality and
+communication. One's level of affinity is expressed on the so-called tone scale.&nbsp;</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Ally">Ally</a>:
+<br>is a person from whom sympathy came when the preclear was ill or injured. An ally coming to the preclear's defense of his words or
+actions aligns with the individual's survival.&nbsp; The Reactive Mind of
+the preclear gives that ally the status of always being right--especially if this ally-relationship
+originally is coming from a highly painful Engram. The alley is seen as a person
+that has to be blindly followed or supported as 'he can do no wrong'.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Alter-is">Alter-is</a>:
+<br>To change or falsify the way something actually is.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Analytical">Analytical</a>:
+<br>means capable of resolving, such as problems and situations. The 'Analytical' mind would be the conscious aware mind which thinks,
+observes data, remembers it and resolves problems. It would be essentially the conscious mind as opposed to the unconscious mind.&nbsp;
+In ST the Analytical mind is the one which is alert and aware and the Reactive Mind simply reacts without
+Analysis.
+<br>The word &quot;analytical&quot; is from the Greek, &quot;analysis&quot;,
+meaning resolve, undo, loosen, which is to say take something to pieces to see what it is
+made of. This is one of those examples of the shortcomings of the English language since no dictionary gives the word &quot;analytical&quot;
+any connection with thinking, reasoning, perceiving, which in essence is
+<br>what it would have to mean, even in English.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Anaten">Anaten</a>:
+<br>An abbreviation of &quot;analytical attenuation,&quot; meaning lowering or weakening of the analytical awareness of an individual for a period of time
+(long or short). It is a degree of unconsciousness. Anaten is a mental&nbsp;
+phenomenon; it stems from the restimulation of an Engram which contains pain and
+unconsciousness.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="ARC">ARC</a>:
+<br>A word made from the initial letters of Affinity, Reality and Communication which together equals understanding. ARC is ronounced as
+three letters A-R-C.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="ARC Break">ARC Break</a>: (ARC brk:)
+<br>1) A sudden drop or cutting of one's affinity, reality, or communication with someone or something. It is pronounced by its letters &quot;A-R-C
+break&quot;.<br>
+2) A sudden drop or cutting of one's affinity, reality or
+communication with someone or something. This is in common language known as an upset or a condition of being
+shocked, disappointed, surprised, offended, etc. The A-R-C break gives an inside look in
+the anatomy of what is going on.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="ARC break assess">ARC break Assessment</a>:
+<br>Reading a prepared auditing list which applies to the activity. The list is
+read to the pc while on a Meter. In the ARC Break Assessment the auditor only
+locates and then indicates the charge found to the pc. It is used on very upset
+pc's where actual auditing is not possible. If auditing is possible you can do
+Auditing by Lists. The same list can be used but here you actually run a process
+to handle each read to F/N VGIs.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="ARCU CDEINR">ARCU CDEINR</a>:
+<br>Stands for affinity, reality, communication, understanding. And curious, desired, enforced, inhibited, no, and refused. These are the points
+assessed by an auditor on the Meter when handling an ARC break. First he
+assesses ARCU, finds the most charged one and indicates it to the pc. Then he assesses CDEINR,
+finds the most charged one and indicates it to the pc. Example: The first
+Assessment finds 'Reality'. This is indicated. The second assessment could end
+up with &quot;Inhibited Reality&quot;. This is indicated to the pc who will feel
+relief.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="As-is">As-is</a>:/As-ising:
+<br>To view anything exactly as it is, without any distortions or lies, at which moment it will&nbsp; be fully understood. When a problem is As-ised it
+will vanish and cease to exist as a problem.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="ASSESS">Assess</a>:<br>
+means to choose, from a list of statements - which item or thing has
+the biggest read on the Meter. The longest read usually
+will also have the pc's interest.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Assessment">Assessment</a>:
+<br>is done by the auditor between the pc's Bank and the Meter. There is no need in assessing to look at the pc. Just note which item has the
+longest fall or Blowdown. The auditor looks at the Meter while doing an Assessment. Also the action of an auditor reading down a list to find
+out which item on the list reacts more than the other items on the list, using a Meter, and so choose which item to handle.<br>
+(See also, Prepared Lists).</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Assist">Assist</a>:
+<br>
+A simple auditing action given as a first aid. Does not replace medical first
+aid. An action undertaken by an auditor to assist the spirit to confront physical
+difficulties.&nbsp;</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="ATTENTION">Attention</a>:&nbsp;<br>
+When interest becomes fixed, we have attention. Attention is aberrated by&nbsp;<br>
+becoming unfixed and sweeping at random, or becoming too fixed without sweeping.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Attention unit">Attention unit</a>:
+<br>Could be considered a theta energy unit of awareness existing in the mind in varying numbers from person to person. This would be the theta
+endowment of the individual; attention units are what he enjoys with, thinks with and works with. Attention units can be caught up in incidents
+on the Time Track and be locked up in these incidents, in problems and so on. A person who is 'not there' mentally has most of his attention units locked up. See also theta.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Auditing">Auditing</a>:
+<br> Also called Processing, the application of ST processes and procedures to a person by a trained auditor. The exact definition of
+auditing is: the action of asking a preclear a question (which he can understand and answer), getting an answer to that question and
+acknowledging him for that answer.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Auditing by Lists">Auditing by Lists</a>. Is
+used to handle Bad Indicators on pc's related to a specific situation or
+auditing action. You use a Prepared List. If auditing is possible you can do
+Auditing by Lists. You assess the list and handle each read to F/N VGIs with a
+process. The same list can be used to do an ARC Break Assessment, but here you
+only assess and indicate the charge.
+
+<br>See also <a href="#ARC break assess">ARC Break Assessment</a>.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="AUDITING COMM C">Auditing Comm C</a>ycle:<br>
+&nbsp;This is the auditing communication cycle that is
+always in use:</font></p>
+<ol>
+  <li><font face="Arial" size="2">&nbsp;Is the pc ready to receive the command? (appearance, presence)</font></li>
+  <li><font face="Arial" size="2">&nbsp;Auditor gives command/question to pc (cause, distance, effect)</font></li>
+  <li><font face="Arial" size="2">&nbsp;Pc looks in his Bank for an answer</font></li>
+  <li><font face="Arial" size="2">&nbsp;Pc receives answer from his Bank</font></li>
+  <li><font face="Arial" size="2">&nbsp;Pc gives answer to auditor (cause, distance, effect)</font></li>
+  <li><font face="Arial" size="2">&nbsp;Auditor acknowledges pc</font></li>
+  <li><font face="Arial" size="2">&nbsp;Auditor sees that pc received the acknowledgement (attention)</font></li>
+  <li><font face="Arial" size="2">&nbsp;New cycle beginning with (1).</font></li>
+</ol>
+<p><font face="Arial" size="2">You drill different parts of this thoroughly in the Training Routines
+(TRs).</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="AUDITING SESS">Auditing Session</a>:<br>
+ A period in which an auditor and preclear are in a quiet
+place where they will not be disturbed. The auditor gives the preclear certain
+and exact commands which the preclear can follow.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="1"><a href="#top">Top</a></font><font face="Arial" size="2">
+<br></font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Auditor">Auditor</a>:
+<br>A person trained and qualified in applying ST processes and procedures to individuals for their betterment; called an
+auditor because auditor means &quot;one who listens.&quot;
+<br></font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Auditor's Code">Auditors Code</a>:
+<br>The technical or professional code of ST auditors; a list of &quot;do's&quot; and &quot;don'ts&quot;. The rules are based on experience
+and have proven themselves to be necessary to ensure
+optimum progress in auditing a case; the governing set of rules for the general activity
+of auditing.<br>
+2) Important set of rules, which guides the auditor's professional
+behavior and attitude. The purpose of these rules is to develop maximum trust
+between auditor and pc. Maximum trust leads to quickest and most lasting
+results. It's a joy to be audited by an auditor, who sticks to this code rigorously
+all the time. Remember the important rule: Auditor plus pc is greater
+than pc's Bank (aud. + pc&gt;Bank).</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Auditor's C/S">Auditors
+C/S</a>:
+<br>A sheet on which the auditor suggests the case supervision instructions
+<br>for the next session. It has to be approved by the C/S before being carried
+out.</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Auditor's Report Form">Auditors Report Form:<br>
+</a>
+This shows in summary form what actions were taken in session and how they went.
+The ARF is made out at the end of each session and is an outline of what
+happened during the session. (Abbreviation: ARF).
+</font></p>
+ 
+
+ 
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Automatic bank">Automatic Bank</a>:
+<br>When a preclear gets picture after picture after picture all out of control. This applies especially to ST 5, Engram Clearing. Automatic Bank
+can occur when the auditor isn't following an assessed somatic or complaint or has chosen the wrong one or one which the preclear is not
+ready to confront.&nbsp;&nbsp;</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Automaticity">Automaticity</a>:
+<br>Something one is doing but is unaware or only partially aware be is doing; something the preclear has &quot;on
+automatic.&quot;</font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Axioms">Axioms: (Axiom:)</a>
+<br>Statements of natural laws on the order of those of the physical sciences.</font></p>
+<p>
+<font face="Arial" size="2">
+<br><a name="B">B</a>:</font></p>
+ 
+
+ 
+<p>
+<font face="Arial" size="1"><a href="#top">Top</a></font></p>
+ 
+
+ 
+<p><font face="Arial" size="2"><a name="Bad indicators">Bad indicators</a>: (Bls:,
+BI's:)
+<br>Those observable indications on the pc and Meter that things are not going well for a preclear.</font></p>
+<p><font face="Arial" size="2"><a name="Bank">Bank</a>:&nbsp;<br>
+ Reactive Bank; Reactive Mind; Engram Bank.
+<br>The mental image picture collection of the preclear. It comes from computer technology where all data are in a &quot;Bank&quot;; portion of the
+mind which contains Engrams, Secondaries and Locks.</font></p>
+<p><font face="Arial" size="2"><a name="Basic">Basic</a>:
+<br>The first incident (such as Engram, Lock, overt act, or traumatic
+experience) on any Chain. The first experience recorded in mental image pictures of the
+type of pain, sensation, discomfort, etc. Every Chain has its basic.&nbsp;</font></p>
+<p><font face="Arial" size="2"><a name="Beingness">Beingness</a>:
+<br>The assumption of or choosing an identity. Beingness is assumed by oneself or given to oneself, or is attained. Examples of
+beingness would be one's name, one's profession, one's physical characteristics, one's role in a game--each and all of these could be
+called one's beingness. &quot;Grant beingness:&quot; To grant life to
+something; to permit or allow other people to have beingness.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Black field">Black field</a>:
+<br>This is just some part of a mental image picture where the preclear is looking at blackness. It is part of some Lock, Secondary or Engram. In
+ST it can occur (rarely) when the pc is exterior, looking at something
+black. It responds to R3RA (Engram running process).</font></p>
+<p><font face="Arial" size="2"><a name="Black V">Black V</a>: (black 5:)
+<br>A heavily occluded case characterized by mental pictures consisting of masses of blackness.</font></p>
+<p><font face="Arial" size="2"><a name="Blow">Blow</a>:
+<br>1) Something that suddenly disappears (such as a problem or charge in
+general) is said to have blown.<br>
+2) To depart without authorization from an area. To leave suddenly without
+explanation. It can be used as a noun and as a verb.<br>
+</font>
+</p>
+<p><font face="Arial" size="2"><a name="Blowdown">Blowdown</a>: (BD:)
+<br>A Tone Arm motion to the left (0.1 of a division or more on the Tone Arm dial of the Meter), made to keep the needle on the dial.
+It signals some mass dissipated or As-ised in the pc's mind; the pc will
+experience some relief as a result. He may express it as &quot;I feel lighter&quot; or
+&quot;Things suddenly cleared up&quot;&nbsp;or show signs of relief. It can also be defined as, the Meter reaction of having found the correct <a href="#By-passed Charge">By-passed Charge</a>.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Body">Body</a>:
+<br>The organism with limbs, head, etc. It's the physical part of a
+human being or animal - whether living or dead.</font></p>
+<p><font face="Arial" size="2"><a name="Book One">Book One</a>  ™
+<br>&quot;Dianetics™: The Modern Science of Mental Health&quot;.</font></p>
+<p><font face="Arial" size="2">Book One™ Auditing: (book one:, book 1:). See,
+Engram Running, 1950 Style.</font></p>
+<p><font face="Arial" size="2"><a name="Bouncers">Bouncers</a>:
+<br>Command phrases in the Bank that throw the pc backward, forward, up or down from the Time Track and so makes it apparently
+unavailable. It's a command phase from an Engram.</font></p>
+<p><font face="Arial" size="2"><a name="Bullbait">Bullbait</a>ing:&nbsp;
+<br>In coaching certain drills the coach attempts to distract the student auditor
+by doing Bullbaiting. This should be done by play acting situations that could
+occur in session, but other things can be used from time to time.&nbsp;As a bullfighter attempts to attract the bull's attention
+and control the bull, so does the coach attempt to attract and control the student auditor's attention; however the coach flunks the student
+auditor whenever he succeeds in distracting the student from the drill and then repeats the action until it no longer has any effect on the
+student (see also Buttons).</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Bulletin">Bulletin</a>:
+<br>In the manual 'bulletin' refers to R. Hubbard Communications Office
+Bulletins (HCOBs).
+<br>See technical bulletin.</font></p>
+<p><font face="Arial" size="2"><a name="Button">Button</a>:<br>
+1)&nbsp; Words, phrases, subjects or actions used by other people,&nbsp;that causes a Bank reaction in an individual, resulting in discomfort,&nbsp;embarrassment or upset, or in making him laugh uncontrollably.
+Buttons are found and pushed in 'TR-0, Bullbaiting' and worked over until 'flat',<br>
+meaning until the person can confront it without any discomfort or reaction.<br>
+2) Items, words, phrases, subjects or areas that are easily restimulated in an individual by the words or actions of other people, and which
+cause him discomfort, embarrassment or upset, or make him laugh uncontrollably.&nbsp;<br>
+<br>
+Button: (auditing button)<br>
+3) This term is also used to refer to specific words or phrases (such as &quot;invalidate&quot; or &quot;suppress&quot;) used in
+auditing, because when the auditor says it to the pc (pushes it) he can get a Meter
+reaction. When a Button reads, it is a valid read. Example: &quot;On
+'Apples' has anything been suppressed&quot; gives a read. This is taken to mean
+'Apples' is charged and can be taken up.</font></p>
+<p><font face="Arial" size="2"><a name="By-passed Charge">By-passed Charge</a>:
+(BPC: bypassed charge:)
+<br>1. Mental energy or mass that has been restimulated in some way in&nbsp;an individual, and that is either in part or wholly unknown to that&nbsp;individual and so is capable of affecting him negatively.&nbsp;&nbsp;<br>
+ 2.
+reactive&nbsp;charge that has been by-passed (restimulated but overlooked by both&nbsp;<br>
+pc and auditor). When found and indicated the pc will experience relief. On a Meter you would see a Blowdown.</font></p>
+<p>&nbsp;</p>
+<p><font face="Arial" size="2"><a name="C">C</a>:
+</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font><font face="Arial" size="2">
+<br><br>
+<a name="Cal-Mag">Cal-Mag Formula</a>: (Cal Mag:)&nbsp;<br>
+The Cal-Mag Formula is designed as a natural
+&quot;Painkiller&quot; without side effects.&nbsp;<br>
+1. Put 1 level tablespoon of calcium gluconate in a normal sized drinking glass.<br>
+2. Add 1 / 2 level teaspoon of magnesium carbonate.<br>
+3. Add 1 tablespoon of cider vinegar (at least 5 percent acidity).<br>
+4. Stir it well.<br>
+5. Add 1 / 2 glass of boiling water and stir until all the
+powder is dissolved and the liquid is clear. (If this
+doesn't occur it could be from poor grade or old magnesium carbonate.)<br>
+6. Fill the remainder of the glass with lukewarm or cold water and cover.&nbsp;The solution will stay good for two days.</font></p>
+<p><font face="Arial" size="2"><a name="Case">Case</a>:
+<br>The sum of aberrated conduct or behavior resulting from the influences of
+the Reactive Mind.&nbsp;<br>
+When a practitioner is displaying 'case' they are acting in an irrational and
+also unprofessional manner.</font></p>
+<p><font face="Arial" size="2"><a name="Case gain">Case gain</a>:
+<br>The improvements and resurgences a person experiences from auditing and training; any case betterment according to the pc.</font></p>
+<p><font face="Arial" size="2"><a name="Case Progress Sheet">Case Progress Sheet</a>:
+<br>is a sheet which details the Levels of processing and training the pc has achieved while moving up the Grade Chart. It also lists incidental
+Rundowns and set-up actions the pc has had. The sheet gives at a glance the pc's progress to OT.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2">Case Supervision: (<a name="C/S">C/S</a>: CS:)
+<br>The inspection of auditing, by a qualified Case Supervisor (using auditor reports, session worksheets and Examiner reports); the ordering
+of standard actions and remedies to ensure maximum gains for the preclear. The written instructions of a case supervisor.</font></p>
+<p>
+<font face="Arial" size="2">
+C/S 53: (CS 53:)<br>
+This Repair List was originally designed to handle high or
+low TA. It is assessed M5 and the reads are handled in the sequence laid out on
+the list. It has been called &quot;The Champion of Repair Lists&quot;, as it has
+proven itself to enable a good auditor to handle all kinds of case difficulties
+- way beyond cases with TA troubles; the C/S 53 is still the list to use
+for High/Low TA. C/S 53 contains &quot;all the elements known to us that bring about case
+foul-ups.&quot;</font></p>
+<p><font face="Arial" size="2">C/S Mini Dictionary: Contains special terms used in
+C/Sing. Part of C/S Mini Hat.
+<br>|<br>
+<a name="Caved in">Caved in</a>:
+<br>a slang term meaning mentally overwhelmed.<br>
+<br>Certs and Awards: (C&amp;A: Certificates and Awards:)
+<br>The office, which issues certificates and awards for the successful completion of courses and auditing cycles. It is
+located in the Qualifications Division.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Chain">Chain</a>:
+<br>A series of incidents of similar nature or similar subject matter. When
+running a Chain the pc is sent earlier and earlier until it the Chain fully
+handled.</font></p>
+<p>
+<font face="Arial" size="2">
+Chain of incidents:
+<br>A whole adventure or activity of many incidents, related to each other by the same subject, general
+location or people. It can go way back in time.</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Charge">Charge</a>:
+<br>The stored quantities of energy on the Time Track; stored energy or stored or re-createable potentials of energy. The electrical impulse on
+the case that activates the Meter. Harmful energy or force accumulated and generated in the Reactive Mind, resulting from the conflicts and
+unpleasant experiences that a person has had.</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Chart of Att">Chart of Att</a>itudes:
+<br>A chart which contains the major attitudes and difficulties people have. It shows the
+<br>attitudes towards life taken by people. A person's attitude improves and his
+difficulties lessens when a person moves up on the tone scale. The chart comes with the book &quot;Science
+of Survival&quot;&nbsp; by R. Hubbard. The book gives an in-depth description of
+the chart.&nbsp;</font></p>
+<p>
+<font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Chart of Human E">Chart of Human E</a>valuation:
+<br>A chart organized in very early 1951 by R. Hubbard. It has various columns and gives behavior characteristics. It is plotted out
+mathematically on the basis of ARC; a very good chart to use in order to predict people.</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Check">Check</a>:
+<br>A checkmark (V) is shorthand; can mean a word check-marked has been cleared with the pc.</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Checklist">Checklist</a>:
+<br>A list of actions or inspections to do to make an activity or machinery or object ready for use, etc.&nbsp; This is different from a &quot;checksheet&quot;;
+&quot; Checksheet&quot; is
+reserved for study steps.</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Checkout">Check-out</a>: (checkout:)
+<br>The action of verifying a student’s knowledge of an item given on a
+checksheet. This is much like a verbal examination in school. But special
+attention is given to definitions of words and the student's ability to
+demonstrate principles with a demo kit.</font></p>
+<p>
+<font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Checksheet">Checksheet</a>: (check-sheet:)
+<br>A Checksheet is a printed form that sets out the items to be studied or done
+by a student, item by item, on a course. It lists all the materials and drills
+of the course in the order in which they are to be studied.</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Circuit">Circuit</a>:
+<br>is a part of an individual's Bank that behaves as though it were someone or something separate from him and either dictates or takes over his
+actions. (Circuits are the result of engramic commands.)</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Class">Class</a>: (Level:)
+<br>Class 0 (Level 0) Communication
+<br>Class I (Level I) Problems
+<br>Class II (Level II) Overts/Withholds
+<br>Class III (Level III) ARC Breaks
+<br>Class IV (Level IV) Service Facsimiles
+<br>Class V (Level V) Engram and Secondaries</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Clay Demo">Clay Demo</a>:
+<br>Clay Demonstration. Making an&nbsp; illustration of the principles studied
+in model clay. The student&nbsp;demonstrates definitions, principles, etc. in clay to obtain
+greater understanding&nbsp;by translating significance into actual mass.</font></p>
+<p>
+<font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Cleaning a Clean">Cleaning a Clean</a>:
+<br>Demanding more than is there. Used when the auditor resorts to harassing a
+pc to get an answer the pc honestly doesn't have.</font></p>
+<p><font face="Arial" size="2"><a name="Clean needle">Clean needle</a>:
+<br>One which show no reaction or change of characteristics. A Clean needle produces no pattern or erratic motions of the smallest
+kind on a question.</font></p>
+<p><font face="Arial" size="2"><a name="Clear">Clear</a>:
+<br> 1) A person (thetan)&nbsp; who can be at cause knowingly and at will over
+mental matter, energy, space and time as regards the first dynamic (survival for
+self). The state of Clear is above the release Grades (Grade 0-4) of ST (all of which has
+to be done before you get to Clear).&nbsp;<br>
+ 2) A Being, who no longer has his own Reactive Mind.
+<br>
+<br><a name="Clear read">Clear read</a>:
+<br>The Tone Arm reading on the Meter on a body of 2.0 for females and 3.0 for males.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Clearing">Clearing</a>:
+<br>Various techniques directed at improving abilities and awareness leading to
+the state of Clear. The activity done in auditing.</font></p>
+<p><font face="Arial" size="2">Clearing Technology:<br>
+See Standard Clearing Technology</font></p>
+<p><font face="Arial" size="2">Coach:<br>
+The person who helps another student understand or apply a particular text or
+drill. He is a one-on-one instructor. Usually students take turns being coach
+and student.&nbsp;<br>
+In Drilling: The one, that directs the student. She is the instructor of
+the drill, the one that calls the shots. The term 'coach' is best known from
+sports; he instructs the players and shows them what to do. During a game he
+gives the players practical advice from the sideline. 'Coach' is also used about
+a private instructor teaching a student.</font></p>
+<p><font face="Arial" size="2"><a name="Coaching">Coaching</a>:
+<br>Training intensively by instruction, demonstration and practice. In training drills, one twin is made the coach and the other the student.
+The coach helps the student to achieve the purpose of the drill. He coaches with reality and intention following
+the materials pertaining to the drill to get the student through it. When this is achieved the roles are reversed--the student
+becomes the coach and the coach becomes the student.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Co-audit">Co-audit</a>ing:
+<br>An abbreviation for co-operative auditing. It means a team of two people who are using ST processes to help each other reach a better life. Sometimes
+three or more people make up a class of co-auditors who audit each other.</font></p>
+<p><font face="Arial" size="2"><a name="Cognition">Cognition</a>: (cog:)
+<br>A pc origination indicating he has &quot;come to realize.&quot; It's a
+&quot;What do you know? I . . .&quot; statement. A new realization of life. It results in a
+higher degree of awareness and consequently a greater ability to succeed with one's endeavors in life.
+<br></font></p>
+<p><font face="Arial" size="2"><a name="Comment (TR-3">Comment: (TR-3</a>: TR 3:)<br>
+ In TRs (TR-3) it is defined as an attempt to distract student auditor or&nbsp;an
+attempt to blow session. Different from Origination (se Origination).
+<br>&nbsp;
+<br>Comm Formula:
+<br>See communication.
+<br>&nbsp;
+<br><a name="Comm lag">Comm lag</a>: (Communication Lag:)
+<br>The time that passes between a question and an actual answer. It can be
+hesitation or reflection, but it can also be not answering the question by
+talking about something that isn't an answer. In study comm lag in a check-out
+is flunked. It shows the student doesn't know the materials 100%. In auditing
+comm lag is just an indicator. A long comm lag means there is aberration in the
+area.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Communication">Communication</a>:
+<br>1) The interchange of ideas or objects between two people or terminals. More precisely the definition of communication is the consideration and
+action of impelling an impulse or particle from source point across a distance to receipt point, with the intention of bringing into being at
+the receipt point a duplication of that which emanated from the source
+<br>point. The formula of communication is: cause, distance, effect, with
+intention, attention, duplication and understanding. Communication by definition does not need to
+be two-way. Communication is one of the component parts of understanding.
+<br>2) The exchange or interchange of ideas or objects between two
+people or designated locations (terminals). More precisely the definition of
+communication is the consideration and action of impelling an impulse or
+particle from source point across a distance to receipt point, with the
+intention of bringing into being at the receipt point a duplication and understanding of that
+which emanated from the source point.</font></p>
+<p><font face="Arial" size="2">Communication, Control, Havingness Processes (<a name="CCHs">CCHs</a>:
+CCH: CCH's:)
+<br>Processes which bring a person into better control of his body and surroundings, put him into better communication with his surroundings
+and other people, and increase his ability to have things for himself. They bring him into the present, away from his past problems.</font></p>
+<p><font face="Arial" size="2"><a name="Communication cycle">Communication cycle</a>:
+(comm cycle:)
+<br>A completed communication, including origination of the communication, receipt of the communication, and answer or acknowledgement of the
+communication.</font></p>
+<p><font face="Arial" size="2"><a name="Completion">Completion</a>:
+<br>A &quot;completion&quot; is the completing of a specific course or an
+auditing Grade, meaning it has been started, worked through and has successfully
+ended. The student or pc usually receives a certificate as a proof.</font></p>
+<p><font face="Arial" size="2"><a name="Computation">Computation</a>:
+<br>technically is that aberrated evaluation and postulate that one must be consistently in a certain state in order to succeed.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2">Confessional Repair List: (LCRE:)&nbsp;<br>
+ This list is used to repair Confessional Auditing. It is used in a
+Confessional session in progress per Confessional Procedure. It is also used to
+handle troubles from other O/W actions such as O/W write-ups. If the person
+after any such action has Bad Indicators or if he gets sick or upset or messes
+up, this list is assessed and handled.</font></p>
+<p><font face="Arial" size="2"><a name="Confront">Confront</a>:
+<br>To face without flinching or avoiding. Confronting is actually the ability to be there comfortably and perceive.</font></p>
+<p><font face="Arial" size="2"><a name="Contact assist">Contact assist</a>:
+<br>A process which can be self-administered in which an injured body part is brought into contact with whatever caused the injury in as nearly as
+possible the same position and circumstances as it originally occurred. You do it only after hot objects have cooled of, turning off electricity,
+stopping the machine that caused the injury, etc.</font></p>
+<p><font face="Arial" size="2"><a name="Control">Control</a>:
+<br>The ability to start, change and stop things at one's own choice.</font></p>
+<p><font face="Arial" size="2"><a name="Correction list">Correction list</a>: (Repair
+List:, Prepared list:)
+<br>is a list of prepared questions on a printed sheet which is used by the auditor for the repair of a particular situation, action, or Rundown.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Cramming">Cramming</a>: (cramm:)
+<br>A special service that handles students' and practitioners' difficulties
+one-on-one, using interviews, Word Clearing and other remedies. It usually takes
+from a couple of hours to a day to complete a cramming.</font></p>
+<p><font face="Arial" size="2">Cramming officer:
+<br>That person in Cramming who helps students or auditors overcome their
+difficulties with materials they have misapplied. He also helps auditors who
+wish to be brought up to date on current technical materials.</font></p>
+<p><font face="Arial" size="2"><a name="C/S 1">C/S 1</a>: (CS 1:)
+<br>An action done by an auditor to prepare a preclear to run in auditing.
+Usually a C/S 1 consists of going through basic definitions and instructions.</font></p>
+<p><font face="Arial" size="2"><a name="C/S 53">C/S 53</a>: (CS 53:)
+<br>The basic prepared list used in auditing to get the Tone Arm up or down into
+normal range. It can handle a long list of case difficulties, whether the pc has
+high/low TA or not.
+<br></font></p>
+<p><font face="Arial" size="2"><a name="D">D</a>:
+</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font><font face="Arial" size="2">
+<br><br>
+<a name="Demo Kit">
+Demo Kit</a>: Demonstration Kit:
+<br>A bunch of rubber bands, batteries, fuses, corks, caps, paper clips, coins or whatever, will do. These are kept in a box or container
+(tobacco tins or dairy cartons are good). These are used to demonstrate ideas with material objects and so increase understanding of the idea.</font></p>
+<p><font face="Arial" size="2"><a name="Denyer">Denier</a>:
+<br>An engramic command that obscures a part of the track by implying it is not there or
+<br>elsewhere (a misdirector) or should not be viewed. &quot;It's not
+there&quot;, &quot;It's over there&quot;, &quot;don't look; it's
+dangerous!&quot; and variations thereof would be examples of this.</font></p>
+<p><font face="Arial" size="2"><a name="Destimulation">Destimulation</a>:
+<br>The action of deleting the moments of restimulation of the Reactive Mind or some portion of it, so that it moves away from the preclear and he is
+no longer connected to it.
+<br></font></p>
+<p><font face="Arial" size="2"><a name="Dianetiks">Dianetics:</a>™
+<br>Subject developed by R. Hubbard. &quot;Man's most advanced school of the mind&quot;. From the Greek &quot;dia&quot;,
+through, and &quot;noos&quot;, soul, thus &quot;through soul&quot; or &quot;through
+thought.&quot;<br>
+In ST it is
+called Engram Clearing due to trademark issues.</font></p>
+<p><font face="Arial" size="2">Director of Processing: (<a name="D of P">D of P</a>:)
+<br>&nbsp;The&nbsp;person who is responsible for having auditors available and preclears to audit, assignment of preclears to auditors,
+scheduling of preclears and sessions.&nbsp;He also checks up on the well being and progress of pc's. He can do&nbsp;metered interviews on pc's on his own authority or the C/S can ask him to
+do metered interviews of a pc to get data.<br>
+The head of the Department of Processing in the Technical Division.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Dirty Needle:">Dirty Needle:</a>  (Symbol
+DN:)
+<br>A needle reaction on the Meter where the needle moves with a ragged, jerky, ticking motion. It is usually a small reaction.
+<br></font></p>
+<p><font face="Arial" size="2"><a name="Dirty Read">Dirty Read</a>: (Symbol DR:)
+<br>A more or less instant response of the needle which is agitated by a major thought. It is an instant tiny (less than a quarter of an inch
+agitation of the needle). It is related to a rock slam,&nbsp;but is not a rock slam. It does not persist.</font></p>
+<p><font face="Arial" size="2">D of P Interview: See Director of Processing.<br>
+An interview of a pc by a D of P or available person. It is usually done on a
+Meter. The purpose is to get data for programming and C/Sing a case. It is not auditing.</font></p>
+<p><font face="Arial" size="2"><a name="Dope off">Dope off</a>:
+<br>The phenomena of a person getting tired, sleepy, foggy (as though doped).</font></p>
+<p><font face="Arial" size="2"><a name="Dramatization">Dramatization</a>: Dramatize:
+<br>To repeat in action what has happened to one in experience. It's a replay out of its time period now of something that happened then.
+The person is going through the motions of some incident as if he was an actor, but he does the re-enacting unknowingly.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Dub-in">Dub-in</a>: (Dub in:)
+<br>Any unknowingly created mental picture that appears to have been a record of the physical universe but is in fact only an altered copy of
+the Time Track. Dub-in is of no concern to auditors as it is handled no differently than any other mental pictures. It is run in auditing
+<br>exactly the same as any Lock, Secondary or Engram. It will eventually get straightened out; the pc will realize what really happened.</font></p>
+<p><font face="Arial" size="2"><a name="Dynamics">Dynamics</a>: (Dynamic:)
+<br>The urge, thrust and purpose of life--SURVIVE!--in its eight manifestations.&nbsp;<br>
+ THE FIRST DYNAMIC is the urge toward survival of self;&nbsp;<br>
+THE SECOND DYNAMIC is the urge toward survival through sex, or children.
+<br>This dynamic actually has two divisions. The Second Dynamic (a) is the sexual act itself and Second Dynamic (b) is the family unit,
+including the rearing of children;&nbsp;<br>
+ THE THIRD DYNAMIC is the urge toward survival through a group of individuals or as a group. Any group or part of an
+entire class could be considered to be a part of the Third Dynamic. The school, the club, the team, the town, the nation are examples of groups;
+<br>THE FOURTH DYNAMIC is the urge toward survival through all mankind and as all mankind;&nbsp;<br>
+ THE FIFTH DYNAMIC is the urge toward survival through life forms such as animals, birds, insects, fish and vegetation, and is
+the urge to survive as these;&nbsp;<br>
+ THE SIXTH DYNAMIC is the urge toward survival as the physical universe and has as its components matter,
+energy, space and time, from which we derive the word MEST;&nbsp;<br>
+ THE SEVENTH DYNAMIC is the urge toward survival through spirits or as a spirit.
+<br>Anything spiritual, with or without identity, would come under the Seventh Dynamic. A sub-heading of this dynamic is ideas and concepts
+such as beauty and the desire to survive through these;&nbsp;<br>
+ THE EIGHTH DYNAMIC is the urge toward survival through a Supreme Being, or more
+<br>exactly, Infinity.</font></p>
+<p>&nbsp;</p>
+<p><font face="Arial" size="2"><a name="E">E</a>:
+</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font><font face="Arial" size="2">
+<br></font></p>
+<p><font face="Arial" size="2"><a name="Earlier Similar">Earlier Similar</a>:
+(ES: E/S:)<br>
+When the auditor is checking the rudiments, he may run into the situation,
+that the difficulty doesn't resolve right away. To resolve the situation he will
+have the pc look for an earlier similar incident.<br>
+Earlier, means it happened before or further back in time, than the
+incident they were just talking about.<br>
+Similar, means it was somewhat the same type of incident. Maybe having to
+do with the same person or persons, the same place or the same surrounding
+circumstances.</font></p>
+<p><font face="Arial" size="2">To ask for an earlier similar incident is used in many processes, as the
+reason the present incident does not resolve is because it unknowingly reminds
+the pc about earlier times. When he is sent earlier and the exact circumstances
+get known to him&nbsp; the subject matter will clear up.</font></p>
+<p><font face="Arial" size="2"><a name="8C">8C</a>: (8-C:)
+<br>A slang term meaning good and effective control of an individual or group. (Name stems from a drill).</font></p>
+<p><font face="Arial" size="2"><a name="E-Meter">E-Meter</a><br>
+Look under <a href="#ST Meter"> ST Meter</a></font></p>
+<p><font face="Arial" size="2">End Phenomena: (<a name="EP">EP</a>:)
+<br>Those indicators in the pc and Meter which show that a Chain or process is ended. In Engram running It shows that basic on that Chain and flow has
+been erased.</font></p>
+<p><font face="Arial" size="2"><a name="Engram">Engram</a>:
+<br>is a mental image picture of an experience containing pain, unconsciousness, and a real or fancied threat to survival. It is a
+recording in the Reactive Mind of something which actually happened to an individual in the past and which contained pain and unconsciousness,
+both of which are recorded in the mental image picture called an Engram. It must, by definition, have impact or injury as part of its content.
+These Engrams are a complete recording, down to the last accurate detail, of every perception present in a moment of partial or full
+<br>unconsciousness.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font><font face="Arial" size="2">
+<br><br>
+Engram Clearing:&nbsp;<br>
+ This is ST
+    Grade 5 - Engram Clearing. It uses Engram running by Chains, Routine-3-RA as its main process.
+It routinely lead to the state of Clear. There are other processes that will
+take the pc to the state of Clear in the case this doesn't happen. But they will
+have to be done under the guidance of a professional auditor/ case supervisor.</font></p>
+<p align="left"><font face="Arial" size="2">Engram Running:&nbsp;<br>
+ Techniques used to run Engrams
+with.&nbsp;Also the activity of applying these techniques to a pc.Today the principal process used is R-3-RA.</font></p>
+<p align="left"><font face="Arial" size="2">Engram Running, 1950 Style:, Auditing out
+Locks, Secondaries and Engrams by using the original techniques of 1950.&nbsp;</font></p>
+<p><font face="Arial" size="2"><a name="Entheta">Entheta</a>:
+<br>Enturbulated (&quot;en&quot;) thought or life (&quot;theta&quot;), especially
+destructive communications based on lies and confusions in an attempt to overwhelm or
+suppress a person or group. Entheta has no power in itself but feed on theta in
+a parasitic fashion.</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Enturbulated">Enturbulated</a>:
+<br>Stirred up, agitated or turbulent.</font></p>
+<p>
+<font face="Arial" size="2">
+Enturbulation:
+<br>When a person's environment has been stirred up, become agitated, or turbulent.</font></p>
+<p>
+<font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Erasure">Erase:/Erasure</a>:
+<br>The action of erasing, (rubbing out) Locks, Secondaries or Engrams.</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="ERASE">Erase</a>, to
+go over an Engram repeatedly until it has vanished entirely.&nbsp;There is a distinct difference between a reduction and an erasure.
+Erasure&nbsp;&nbsp;is accomplished when you find the earliest part of the earliest incident
+on&nbsp;a Chain and get the postulate made at the time.&nbsp;<br>
+When the postulate comes off the incident will be erased.</font></p>
+<p><font face="Arial" size="2">E/S, see Earlier Similar</font></p>
+<p><font face="Arial" size="2"><a name="Ethics">Ethics</a>:
+<br>Rationality toward the highest level of survival for the individual, the future race, the group and mankind. Ethics is reason and the
+contemplation of optimum survival.</font></p>
+<p><font face="Arial" size="2"><a name="Ethics Officer">Ethics Officer</a>:
+(E/O:)
+<br>A person who handles ethics.</font></p>
+<p><font face="Arial" size="2">Evaluate:&nbsp;<br>
+ To judge and determine the meaning,
+correctness, value, and consequence of a datum (verb).</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Evaluation">Evaluation</a>:&nbsp;
+<br>1) Evaluation: The act of evaluating. The result of something being
+evaluated (noun).&nbsp;<br>
+A student has to evaluate the data studied. On the other hand he should not try
+to evaluate for somebody else. Each student should arrive to a result based on
+their own efforts. Only in this way will anybody achieve sufficient certainty.<br>
+2) In auditing: Telling a pc &quot;what's wrong with him&quot; or why he is the
+way he is is incorrect. In auditing the auditor guides the pc to find
+explanations and solutions for himself. It is against the Auditors Code to
+evaluate for a pc in session. When a person is allowed to do his own evaluations
+he achieves greater certainty.<br>
+3) Any attempt by someone to impose his data or knowledge upon another. An example would be someone telling another why he is the way he is instead
+of permitting or guiding him to discover it for himself.</font></p>
+<p><font face="Arial" size="2"><a name="Evil purpose">Evil purpose</a>: (Ev Purp:)
+<br>Destructive intention. A non-survival course aimed at destroying something.&nbsp;</font></p>
+<p><font face="Arial" size="2"><a name="Examiner">Examiner</a>: Preclear Examiner:
+<br>1) The person to whom preclears are sent immediately after any auditing session. The Examiner says nothing to the
+preclear in this situation, noting only what the pc's Tone Arm position and state of the needle on the Meter and recording what the pc
+says, if anything. The Examiner is also the person a preclear sees if he wishes to make any sort of statement regarding his case, or if there is
+<br>something he wants handled regarding his case.<br>
+2)&nbsp; In a bigger organization there is a so-called Examiner. The Examiner is there to give pc an independent inspection after session. He will
+seat the pc and have him hold the Meter cans for a moment. He won't say
+anything, but simply note down pc's appearance and Meter response. Pc can (and
+should) give a statement about the session to him.</font></p>
+<p><font face="Arial" size="2"><a name="Exam Report">Exam Report</a>:
+<br>The report made out by the Examiner when the pc goes to exams after sessions or goes on his own volition. It contains the Meter details,
+pc's indicators and the pc's statement.</font></p>
+<p><font face="Arial" size="2"><a name="Exterior">Exterior</a>: Exteriorized:
+<br>The state of the thetan being outside the body, with or without full
+perception.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2">Exteriorization:
+<br>The act of moving out of the body with or without full perception. Becoming exterior.</font></p>
+<p><font face="Arial" size="2">Exteriorization Rundown: See Interiorization Rundown.</font></p>
+<p><font face="Arial" size="2">Ext-Int: Exteriorization-Interiorization: See Interiorization Rundown.</font></p>
+<p>&nbsp;</p>
+<p><a name="F"><font face="Arial" size="2">F</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2">Flow: Direction of energy or action. Most
+processes of Grade 0-5 are audited on 4 flows. (see Flow).<br>
+F1: <a name="Flow one"> Flow one</a>: another doing something to self.<br>
+F2: Flow two: doing something to another.<br>
+F3: Flow three: others doing things to others.<br>
+F0: Flow zero: person doing something to self.</font></p>
+<p><font face="Arial" size="2"><a name="Facsimile">Facsimile</a>:
+<br>&quot;Any&quot; mental image picture that is unknowingly created and part of
+the Time Track, whether an Engram, Secondary, Lock or pleasure moment. Originally means, &quot;make similar&quot;.</font></p>
+<p>
+<font face="Arial" size="2">
+False TA Check List:<br>
+It is a
+check list to use, when False TA is suspected. It goes through all the physical
+causes (like dry or moist hands) that can cause the TA to be in a false range,
+that don't reflect the state of case. This list is not assessed on the Meter. It
+is used as a checklist for physical inspections.</font></p>
+<p><font face="Arial" size="2"><a name="Fall">Fall</a>: Symbol F:
+<br>An Meter needle read in which the needle moves rapidly to the right, from one to two inches.</font></p>
+<p><font face="Arial" size="2"><a name="Firefight">Firefight</a>:
+<br>The action of a quarrel between an auditor and a pc.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Flash answer">Flash answer</a>:
+<br>Instantaneous reply, the first thing that flashes into the preclear's mind at the snap of the auditor's fingers upon asking a question.</font></p>
+<p><font face="Arial" size="2"><a name="Flat">Flat</a>:
+<br>No longer producing change or a reaction. Or, in Engram running, referring
+to an Engram, erased.</font></p>
+<p><font face="Arial" size="2"><a name="Flatten">Flatten</a>:
+<br>To continue to do (something) until it no longer produces a reaction.</font></p>
+<p><font face="Arial" size="2">Flatten a process: To continue a process as long as it produces change
+and no longer. In Engram running it is to continue running a Chain of incidents until basic on that Chain is reached and erased. With CCHs, it
+is three commands getting equal comm lag response with the pc doing the process.</font></p>
+<p><font face="Arial" size="2">Floating Needle: <a name="(FN">(FN: </a> or
+F/N:)&nbsp;<br>
+ A floating needle is a certain needle behavior on a Meter. It is a rhythmic sweep of the needle over the dial at a slow, even pace.
+A valid&nbsp; floating needle is always accompanied by very good indicators in
+the pc.<br>
+2) The idle uninfluenced movement of the needle on the Meter dial without any pattern or reactions in it. It can be as small as
+1-inch or as large as dial wide. It does not fall or drop to the right of the dial. It moves to the left at the same speed as it moves to the
+right. It is usually observed on a Meter calibrated with the Tone Arm between 2.0 and 3.0 with good indicators in on the pc. It can occur after a
+cognition, Blowdown of the Tone Arm, or just moves into floating. The pc may or may not voice the cognition.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="FLOW">Flow</a>:<br>
+A stream of energy between two points. An impulse or direction of
+energy particles or thought or objects between terminals. In processing the auditor works with four main flows:<br>
+FLOW 1: something happening to self. Another doing something to you.<br>
+FLOW 2: doing something to another. You doing something to another.<br>
+FLOW 3: others doing things to others. You see it happen as a
+spectator.<br>
+FLOW 0: self doing something to self. You do something to
+yourself.</font></p>
+<p><font face="Arial" size="2"><a name="Free needle.">Free needle:</a><br>
+(Same as Floating Needle)&nbsp;</font></p>
+<p><font face="Arial" size="2"><a name="Floating TA">Floating TA</a>:
+<br>The pc is so released the needle can't be gotten onto the dial. The needle is swinging wider than the Meter dial both ways from center and
+appears to lay first on one side and then the other. The Tone Arm can't be moved fast enough to keep the extreme floating needle on the dial.</font></p>
+<p><font face="Arial" size="2">Flow:
+<br>Impulse or direction of thought, energy or action between terminals.</font></p>
+<p><font face="Arial" size="2">Flow lines:
+<br>Refers to the administrative lines of an organization which facilitate the delivery of auditing and training.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font><font face="Arial" size="2">
+<br>&nbsp;
+<br><a name="Flunk">Flunk</a>:&nbsp;<br>
+ 1) To make a mistake. Fail to apply the materials learned.&nbsp;Opposite of
+pass. Also used by coaches as a command: &quot;Flunk!&quot;,&nbsp;to tell the student
+a mistake was made.
+<br>&nbsp;
+<br><a name="Fly a Rud:">Fly a Rud:</a> Fly a rudiment:
+<br>The auditor must get a free needle (floating needle) on one of the rudiment questions (ARC breaks, PTPs, missed withholds.)
+This is done to get a pc ready to run a Major Action.</font></p>
+<p><font face="Arial" size="2"><a name="Folder">Folder</a>:
+<br>A folder sheet of cardboard which holds all the session reports and other items related to one pc's auditing. The folder is A4 or Legal size
+file folder made of light cardboard.</font></p>
+<p><font face="Arial" size="2"><a name="Folder Error Summary">Folder Error Summary</a>:
+(FES:)
+<br>A summary of auditing errors in a folder and on a pc's case not corrected at the time the summary is done. When something is corrected
+later it is clearly marked in the FES.</font></p>
+<p><font face="Arial" size="2"><a name="Folder Summary">Folder Summary</a>:
+<br>Sheets located inside the front cover of a pc folder giving an adequate summary of actions taken on a pc in consecutive order. It gives the
+content of the pc folder. The auditing history session by session, if you will.</font></p>
+<p><font face="Arial" size="2">Free Needle: See floating needle.</font></p>
+<p><font face="Arial" size="2"><a name="Free track">Free track</a>:
+<br>That part of the Time Track that is free of pain and misadventure, in that the pc doesn't freeze up on it.</font></p>
+<p>&nbsp;</p>
+<p><a name="G"><font face="Arial" size="2">G</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="GF M5">GF M5</a>: Green Form Method 5
+<br>This means assessing of the Green Form by an auditor once through marking the length and Blowdown of all reads as they occur when the
+questions are asked of the pc. Those questions which read are then handled one at a time (when the assessment is completed) in order from the largest
+read to the smallest.</font></p>
+<p><font face="Arial" size="2"><a name="GR 40">GF 40</a>: Green Form 40:<br>
+1) This is a
+prepared list designed to handle resistive cases. If a pc does not seem to make
+any progress or respond to good auditing, regardless of any past errors
+completely handled, this list can be used to find the exact reason and will give
+you a handling for it.&nbsp;
+<br>2) This is item number 40 on the green form and is a special prepared list of items with specific actions to be done for each item.&nbsp;It is designed to handle resistive cases (see also 'Seven Resistive Cases').&nbsp;<br>
+There exist a Green Form 40 Expanded, which is a separate list. It uses the same
+categories of 'resistive cases', but they are assessed in greater detail in
+order to find the exact reason for the pc's resistiveness to progress in
+auditing.</font></p>
+<p><font face="Arial" size="2"><a name="GOALS PROBLEM MASS">Goals-Problems-Mass</a>:,
+(GPM:)&nbsp;<br>
+Persistent masses, ridges and problems in the pc's Bank with a certain anatomy.
+The basis of this is beingnesses the person has been. Each beingness was
+motivated by a specific goal - a certain direction and method of survival. These
+goals and beingnesses changed over time. Thus we can find goals and beingnesses
+on the pc's track in direct opposition to each other. This created a problem and
+ridge. The problem was created by two or more opposing goals, which being
+opposed, balanced, and unresolved, made a mass.&nbsp;<br>
+ It's a mental energy mass. So
+you will find items (valences) in opposition to one another. Any pair of these
+items, in opposition to each other, constitute a specific problem called a
+GPM.&nbsp;<br>
+<br><a name="Good indicators">Good indicators</a>: (GI: GIs: GI's:)
+<br>Those observable indications that all is going well for a preclear. The pc is bright, happy and winning. Pc smiling and happy.</font></p>
+<p><font face="Arial" size="2"><a name="Grade Chart">Grade Chart</a>:
+<br>This chart shows all the levels of ST auditing and training. It is the map&nbsp;of the road to Clear.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Grade">Grade</a>:
+<br>A series of processes culminating in an exact ability attained, examined, and attested to by the pc.</font></p>
+<p><font face="Arial" size="2">Grades:
+<br>A series of steps or levels in which a preclear regains specific abilities and loses specific inabilities on a gradient to becoming
+clear. They are achieved with auditing. See also release.<br>
+Grades 0-4 are Release Grades. These are sometimes called Expanded Grades.<br>
+Grade 5, Engram Clearing, is different as Engram running goes for permanent
+erasure of traumatic incidents. Engram Clearing routinely leads to the state of Clear.</font></p>
+<p><font face="Arial" size="2">Grade 0: (Grade Zero: Communication release:)
+<br>Grade 1: (Grade One: Problems release:)
+<br>Grade 2: (Grade Two: Relief release:)
+<br>Grade 3: (Grade Three: Freedom release:)
+<br>Grade 4: (Grade Four: Ability release:)</font></p>
+<p><font face="Arial" size="2"><a name="Gradient">Gradient</a>:
+<br>Something that starts out simple and gets more and more complex. The essence of a gradient is just being able to do a little bit more and a
+little bit more and a little bit more until you finally make the Grade.</font></p>
+<p><font face="Arial" size="2"><a name="Green Form">Green Form</a>: (GF:)
+<br>1) A standard form used in Review auditing. It's called Green Form because it
+was originally printed with green ink on white paper. It handles out-rudiments and
+odd case problems caused by life rather than earlier faulty auditing.&nbsp;<br>
+&nbsp;2) The Green Form is used to detect the peculiarities and
+elements of a pc's life which are causing case trouble or preventing gains. (It
+is not used to cure high or low TA.) Per Auditors Rights it can be used by the auditor in case the rudiments won't
+fly. In this case it is assessed Method 3 and handled, not going beyond F/N VGIs.
+But its real use is Method 5 and then sent to C/S for programming.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2">Green Form 40: See GF 40.</font></p>
+<p><font face="Arial" size="2"><a name="Grinding">Grinding</a>: Grinding out
+<br>Going over and over and over a Lock, Secondary or Engram without obtaining an actual erasure. The sense of the word comes from the action
+of using an emery wheel on a hard substance with it not getting much smaller or thinner no matter how long it is done. It specifically applies to
+Engram running. It's a bad indicator.</font></p>
+<p><font face="Arial" size="2"><a name="Grouper">Grouper</a>:
+<br>Is anything which pulls the Time Track into a bunch at one or more points. When the grouper is gone the Time Track is perceived to be
+straight.&nbsp;Usually means an engramic command, such as &quot;we are all together&quot;,
+&quot;we are all one&quot;, and the like, causing the Grouper phenomenon.</font></p>
+<p><font face="Arial" size="2"><a name="Gungho">Gung-ho</a>  Group: (Gung ho:)
+<br>Gung-ho: means &quot;pull together&quot; in mandarin. It pulls together other
+groups in the community to work towards the betterment of society and of the area. The groups program works on the motto: a community that pulls
+together can make a better society for all.
+<br></font></p>
+<p><a name="H"><font face="Arial" size="2">H</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2">Hand space mimicry:
+<br>A CCH process.</font></p>
+<p><font face="Arial" size="2"><a name="Handwiting Drill:">Handwriting Drill</a>:
+(handwriting:)<br>
+ If the C/S can't read the worksheets due to bad
+handwriting or lack of data he sends the folder back to the auditor for
+clarification. The auditor should overprint unreadable words with a red pen. The
+C/S sees to that his auditors catch up on writing understandable reports the
+first time and can have them train in handwriting drills to catch up on speed
+and clarity. The auditor should not have to spend a lot of time after session
+clarifying worksheets. He simply have to drill to write fast and readable, keep to essentials
+and quickly clarify worksheets after session. He may have to work on his
+handwriting letter for letter to make it easier to read.</font></p>
+<p><font face="Arial" size="2"><a name="Hat">Hat</a>:
+<br>Slang term for the work and title of one's post in an organization.&nbsp;(derived
+from railroad use of distinctively different hats to indicate different jobs.)</font></p>
+<p><font face="Arial" size="2"><a name="Havingness">Havingness</a>:
+<br>The concept of being able to reach. Owning, possessing, experiencing. Affinity, reality,
+communication with the environment.</font></p>
+<p><font face="Arial" size="2"><a name="Hidden standard">Hidden standard</a>:
+(HS:)
+<br>A problem a person thinks must be resolved before auditing can be seen to have worked. It's a standard by which to judge ST or auditing or the&nbsp;auditor. This hidden standard is always an old problem
+of long duration. It is a postulate counter-postulate situation--the source of the counter postulate was suppressive to the pc.</font></p>
+<p><font face="Arial" size="2"><a name="High TA">High TA</a>:
+<br>Tone arm reading above 3.5 on the Tone Arm dial.</font></p>
+<p>
+<font face="Arial" size="2">
+<br>&nbsp;
+<br><a name="I">I</a>:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Implant">Implant</a>:
+<br>A painful and forceful means of overwhelming a being with artificial purposes or false concepts in a malicious attempt to control and
+suppress him.</font></p>
+<p><font face="Arial" size="2">Implanter: One who implants. See Implant.</font></p>
+<p><font face="Arial" size="2"><a name="In">In</a>:
+<br>Things which should be there and are or should be done and are, are said to be &quot;in,&quot; i.e., &quot;We got scheduling in.&quot;</font></p>
+<p><font face="Arial" size="2"><a name="Incident">Incident</a>:
+<br>The recording of an experience, simple or complex, related by the same subject, location or people understood to take place in a short or
+finite time period such as minutes or hours or days.</font></p>
+<p><font face="Arial" size="2"><a name="Indoctrination">Indoctrination</a>:
+<br>To teach a doctrine, belief, or principle to; to teach. Indoctrination means two things, (1) To instruct in a body of knowledge,
+and&nbsp;(2) to teach to accept a system of beliefs or convictions uncritically.<br>
+<br><a name="in-session">in-session</a>:
+<br>Interested in own case and willing to talk to auditor.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Intensive">Intensive</a>:
+<br>A specific number of hours of auditing given to a preclear over a short period of time, as a series of successive sessions at regularly
+scheduled intervals. Twenty-five hours of auditing administered over a five-day period or occupying 10 evenings would be examples of
+intensives. Auditing is sometimes sold in Intensives, each intensive
+is&nbsp; 12 1/2 hours of session time.</font></p>
+<p><font face="Arial" size="2"><a name="Interiorization">Interiorization</a>:
+<br>The action of going in; a thetan becoming interiorized in a body. An analogy would be stepping through a doorway into a room or getting into
+an automobile.</font></p>
+<p><font face="Arial" size="2">Interiorization Rundown: (Int RD: Int Rundown: or Int/Ext
+RD:)
+<br>A remedy designed to permit the pc to be further audited after he has gone exterior. It is NOT meant as a method of exteriorizing the pc;
+originally named the Exteriorization Rundown or Ext RD.</font></p>
+<p><font face="Arial" size="2">Interiorization Rundown Correction List: (Int RD
+Correction List: ICL:)
+<br>A prepared list that is used after a pc has had an Int RD but continues to have difficulty with Interiorization.
+It is used NOT to solve the case but to make Interiorization cease to read and be clean as a subject by isolating the exact
+points missed in earlier handling or handlings.&nbsp;</font></p>
+<p><font face="Arial" size="2"><a name="Interne">Interne</a>: (intern:)
+<br>An advanced graduate or recent graduate of an auditing level who is auditing to get practical
+experience under professional supervision.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2">Internship:
+<br>Apprenticeship served by an Interne.</font></p>
+<p><font face="Arial" size="2"><a name="Invalidation">Invalidation</a>:
+<br>Means a degrading, 'trashing', ridiculing, discrediting or denying something
+someone else considers to be a fact or of value.</font></p>
+<p><font face="Arial" size="2"><a name="Invisible field">Invisible field</a>:
+<br>This is just a part of some Lock, Secondary or Engram that is &quot;invisible.&quot; It, like a black field,
+responds to R3RA, Engram
+Running by Chains.</font></p>
+<p><font face="Arial" size="2"><a name="Is-ness">Is-ness</a>:
+<br>Something that is persisting on a continuum.</font></p>
+<p><font face="Arial" size="2"><a name="Item">Item</a>:
+<br>Any one of a list of things, people, ideas, significances, purposes, etc., given by a preclear to an auditor while listing; any separate
+thing or article; in particular, one placed on a list by a pc.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Itsa">Itsa</a>:
+<br>A term made from &quot;It is a&quot;; a term for a pc's action of
+answering an auditor's question in which the pc positively identifies something with certainty.</font></p>
+<p>&nbsp;</p>
+<p><font face="Arial" size="2"><a name="Itsa-maker line">Itsa-maker line</a>:
+(Itsa maker: Itsa-maker:)
+<br>Communication line from the preclear to his own Bank. The pc is inspecting his Bank and is somewhat introverted. It's the most
+important part of the auditing comm cycle as the pc is confronting his Bank and finding answers.<br>
+<br></font></p>
+<p><a name="J"><font face="Arial" size="2">J</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2">Jonathan: Livingston: Seagull: A symbolic book by Richard Bach about a
+seagull perfecting the ability to fly (symbolic for wisdom and ability). He
+teaches it to other selected seagulls. The seagull is the symbol
+for ST.&nbsp;</font></p>
+<p><a name="K"><font face="Arial" size="2">K</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Key in">Key in</a>: (Key-in:)<br>
+ Is a moment where an earlier upset or earlier incident has been
+restimulated and affect pc in a negative way.
+<br>The action of recording a Lock on a Secondary or Engram; the moment an earlier upset or earlier incident has been restimulated.<br>
+<br><a name="Key out">Key out</a>: (Key-out:)<br>
+ The action of a reactive&nbsp; incident (or many related incidents)
+dropping away without the mental image pictures being erased. The picture is
+still there but now far away. The pc feels released or separate from his Reactive Mind
+or some portion of it. An action of an Engram or Secondary dropping away without being erased.
+Released or separate from one's Reactive Mind or some portion of it.</font></p>
+<p><font face="Arial" size="2"><a name="Know-to-Mystery">Know-to-Mystery</a>: Scale:
+<br>The scale of affinity from Knowingness, down through Lookingness, Emotingness, Effortingness, Thinkingness, Symbolizingness, Eatingness,
+Sexingness, and so through to Not-knowingness to Mystery.
+<br></font></p>
+<p><a name="L"><font face="Arial" size="2">L</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2">L1C:&nbsp;<br>
+Repair List used by auditors in session when an upset occurs, or as ordered by
+C/S. It handles ARC Broken, Sad, hopeless or nattery pc's. Questions can be
+prefaced with &quot;Recently&quot;, &quot;In this life&quot;, &quot;On the Whole
+Track&quot;, or used without. It is not to be used to handle high or low TA.</font></p>
+<p><font face="Arial" size="2"><a name="L3RH">L3RH</a>:
+<br>A prepared list used for locating and handling all errors and trouble in Engram running sessions. The repair list for all problems with R3RA and
+Engram running.</font></p>
+<p>
+<font face="Arial" size="2">
+L4 Short: (L4:)&nbsp;<br>
+ This is a short version of list correction. It contains all the
+most common errors. It is valid on listing in progress or recently done. If it
+doesn't resolve the difficulties a full L4BRB can be used (see below).</font></p>
+<p><font face="Arial" size="2"><a name="L4BRB">L4BRB</a>:
+<br>1) A prepared list used in ST for handling all Listing &amp; Nulling errors, when trouble
+occurs on a listing (L&amp;N) process, when TA goes high or pc gets sick or upset after a
+session that included listing actions.<br>
+2) Used to sort out all possible errors related to L&amp;N. The L4 is
+designed to sort out an L&amp;N action in progress. If that doesn't handle,
+there may be prior or other problems that need to be addressed. The L4BRB is
+thus designed to cover a broader area.</font></p>
+<p><font face="Arial" size="2"><a name="Latent read">Latent read</a>:
+<br>If (the needle) doesn't fall or react for a second or more (after the question is asked) and then reacts. This is a latent read.
+They are used in auditing to steer a pc to charged areas in the pc's Bank (see Steering the pc).</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="List">List</a>:
+<br>As part of auditing procedure: Items given by a pc and written down by the
+auditor. Prepared List: A printed form with questions used for assessment on a pc.<br>
+<br><a name="Listing">Listing</a>:
+<br>A special ST procedure used in some processes where the auditor writes down items said by the preclear in response to a question by the
+auditor, in the exact sequence that they are given to him by the preclear.</font></p>
+<p><font face="Arial" size="2">Listing and Nulling: <a name="L &amp; N"> L &amp; N</a>:
+<br>A ST procedure in auditing done according to very exact rules as given in the Laws of Listing and Nulling. This is taught on ST 3.</font></p>
+<p><font face="Arial" size="2"><a name="Locational">Locational</a> processing:
+(Locational:)<br>
+1) Processing which establishes confront and communication with the environment.
+It brings the person into present time; he becomes more alert and responsive. It
+can be run on one pc or on a whole class of students at the same time with
+benefit.
+<br>2) Processing which establishes a stability in the environment of the preclear on the subject of objects and people. It can be run in busy
+thoroughfares, parks, confused traffic or anywhere that there is or is not motion of objects and people. It is used in the auditing room itself
+to orient the preclear.</font></p>
+<p><font face="Arial" size="2"><a name="Lock">Lock</a>:
+<br>A mental image picture of an incident where one was knowingly or unknowingly reminded of a Secondary or Engram. It does not itself
+contain a blow or a burn or impact and is not any major cause of misemotion. It does not contain unconsciousness. It may contain a
+feeling of pain or illness, etc., but is not itself the source of it. A Lock is a mental image picture of a non-painful but disturbing
+<br>experience the person has experienced and which depends for its force on an earlier Secondary and Engram which the experience has restimulated.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Long Fall">Long Fall</a>: Symbol LF:
+<br>A Meter needle reaction in which the needle moves rapidly to the right;&nbsp;length: from two to three inches.</font></p>
+<p><font face="Arial" size="2"><a name="Long Fall Bl">Long Fall Bl</a>owdown: Symbol
+LFBD:
+<br>A Meter reaction in which the needle moves rapidly to the right and requires that the Tone Arm be adjusted in order for the needle to remain
+on the needle dial.</font></p>
+<p><font face="Arial" size="2"><a name="Low TA">Low TA</a>:
+<br>Tone Arm reading below 2.0 on the Tone Arm dial.
+<br></font></p>
+<p><a name="M"><font face="Arial" size="2">M</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Machine">Machine</a>: (Mental
+Machine:)&nbsp;
+<br>An actual machine in the mind (like ordinary machinery) constructed out of mental mass and energy, that has been made by the individual to do
+work for him, usually having been set up so as to come into operation automatically under certain pre-determined circumstances.</font></p>
+<p><font face="Arial" size="2"><a name="MAJOR ACTION">Major Action</a>: (Major:)<br>
+any auditing action designed to change a case or general considerations or
+handle continual illness or improve ability. This means a process or even a
+series of processes like four flows. It doesn't mean a Grade. It is any
+process the case hasn't had.</font></p>
+<p><font face="Arial" size="2"><a name="Mass">Mass</a>:
+<br>A composition of matter and energy existing in the physical universe.</font></p>
+<p><font face="Arial" size="2"><a name="Mental mass">Mental mass</a>: is contained in mental image pictures.<br>
+1)&nbsp; Mocking up matter, energy, space and time. Its proportionate weight would be terribly slight compared to the real object which the person is
+mocking up a picture of.
+<br>2)&nbsp; Mental matter, energy, space and time. It exists
+in the mind
+and has physical existence, that can be measured by a Meter. Its
+proportionate weight would be terribly slight compared to the real object which
+the person is making a picture of. The Meter registers
+mental mass; changes of the position of the needle indicates changes of the mass
+in pc's mind.</font></p>
+<p><font face="Arial" size="2"><a name="Mental image pictures">Mental image pictures</a>:
+(MIP:)<br>
+Mental pictures; facsimiles: a copy of one's
+perceptions of the physical universe of some time or incident in the past.&nbsp;It can also be
+mock-ups, meaning produced by the thetan with his imagination and not a copy of
+an actual incident.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Mental pictures">Mental pictures</a>:<br>
+Facsimiles and mock-ups; usually a copy of one's perceptions of the physical universe sometime in the past.</font></p>
+<p><font face="Arial" size="2"><a name="MEST">MEST</a>:
+<br>Word coined from the initial letters of Matter, Energy, Space and Time; the physical universe and its component parts; also used as an adjective
+in the same sense to mean physical, as in &quot;MEST universe,&quot; meaning &quot;physical universe.&quot;</font></p>
+<p><font face="Arial" size="2">Meter, see <a href="#ST Meter"> ST Meter</a></font></p>
+<p><font face="Arial" size="2"><a name="Method 3">Method 3</a>: (M3:
+M 3: M-3: Assessment:)
+<br>An Assessment in which each reading question is taken up and handled with the preclear when it is seen to read and before continuing the
+Assessment.</font></p>
+<p><font face="Arial" size="2"><a name="Method 5">Method 5</a>: (M5:
+M 5: M-5: Assessment:)
+<br>Assessing a prepared list once through marking the length and Blowdown of all reads as they occur when the questions are asked of the pc. Those
+questions which read are then handled one at a time in order from the largest read to the smallest.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Mind">Mind</a>:
+<br>A control system between the thetan and the physical universe. It is not the brain. The mind is the accumulated recordings of thoughts,
+conclusions, decisions, observations and perceptions of a thetan throughout his entire existence. The thetan can and does use the mind in
+handling life and the physical universe.</font></p>
+<p><font face="Arial" size="2">Minerals:, see <a href="#Vitamins">Vitamins/Minerals.</a></font></p>
+<p><font face="Arial" size="2"><a name="Misemotion">Misemotion</a>:
+<br>Anything that is unpleasant emotion such as antagonism, anger, fear, grief, apathy or a death feeling; mis-aligned emotion, irrational or
+inappropriate emotion. Misemotion is also emotion which has been
+<br>suppressed and which remains part of the individual's Locks and Secondaries unless he is audited.</font></p>
+<p><font face="Arial" size="2"><a name="Missed Withhold">Missed Withhold</a>:
+(M/W/H: M/WH: MWH:)
+<br>A withhold, which has been restimulated by another
+but not disclosed. This is a withhold which another person nearly found
+out about, leaving the person with the withhold in a state of wondering whether
+her hidden deed is known or not. The missed withhold is different from
+the withhold as the pc's main worry is, if the other person found out or not.
+The action of the other to nearly find out or maybe he found out
+or guessed it is why it's called a missed withhold.</font></p>
+<p><font face="Arial" size="2"><a name="Mock-up">Mock-up</a>: (Mockup: Mock
+up:)&nbsp;&nbsp;
+<br>Any &quot;knowingly created&quot; mental picture that is not part of a Time Track;
+<br>Can be used as noun: &quot;It's a mock-up&quot; or a verb: &quot;to mock-up
+something&quot;.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Model Session">Model Session</a>:
+<br>The same exact pattern and script with which ST sessions are begun
+and ended.</font></p>
+<p><font face="Arial" size="2"><a name="Motivator">Motivator</a>:
+<br>Actions which were directed against the preclear by others or another, used by him to justify (used as a &quot;motive&quot; for) overts; an
+aggressive or destructive act received by the person.</font></p>
+<p><font face="Arial" size="2"><a name="Multiple illness">Multiple illness</a>:
+<br>The preclear is physically uncomfortable or ill from several Engrams of different types all restimulated. One runs one somatic Chain at a time,
+running each new symptom that is assessed or stated by the preclear.</font></p>
+<p><a name="N"><font face="Arial" size="2">N</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Narrative chain">Narrative Chain</a>:
+(Narrative:)
+<br>A Chain of similar &quot;experiences&quot; rather than similar somatics. A Chain
+of incidents of similar description or event. In such a Chain there may be hundreds to millions of events or incidents. Narrative Chains can be
+run in Engram running but sometimes the Narrative Chains are very long without reaching
+the basic of the Chain. More specifically, a Chain in which the similarity of content is of &quot;events&quot; &quot;story&quot; content
+(&quot;falls downstairs,&quot; &quot;fight with brother&quot;).</font></p>
+<p><font face="Arial" size="2"><a name="Narrative Item">Narrative Item</a>:
+<br>One which will land the pc in a single incident for which there is no Chain. You run recent accidents and losses as Narrative Items.</font></p>
+<p><font face="Arial" size="2"><a name="Natter">Natter</a>:
+<br>Criticalness; unnecessarily and ineffectively talking about someone or something in a negative way; the word is coined from negative chatter.</font></p>
+<p><font face="Arial" size="2"><a name="Non Interference Zone">Non Interference Zone</a>:
+(Non-interference:)
+<br>The rule that preclears and pre-OTs from Clear to OT 3 may not be audited on anything else but those levels or necessary repair to get
+them back on those levels and through OT 3.</font></p>
+<p><font face="Arial" size="2"><a name="Not-is">Not-is</a>; Not-isness:, Not-ising:
+<br>The effort to reduce an unwanted condition of existence by force. It can
+cause the person 'to forget about it' or make a thing look smaller, but does not
+handle the underlying difficulty. See also As-is</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Null">Null</a>:
+<br>1)To nullify or to reduce the value or effect of something to nothing.
+<br>2) means there was no reaction of the needle on the needle dial of the Meter when the auditor had asked a question of the preclear; or simply
+it didn't read.</font></p>
+<p><font face="Arial" size="2"><a name="Nulling">Nulling</a>:
+<br>The auditor's action in saying items from a list to a preclear and noting the reaction of the preclear's Bank on a Meter.
+<br>2) In Listing &amp; Nulling: The auditor reads back the list of items the pc
+just gave him in order to find only one item that is still reading. This is done under the
+Laws of L&amp;N.</font></p>
+<p><font face="Arial" size="2"><a name="Null Item">Null Item</a>: or Null List:
+<br>An item or list of items which when called out by the auditor, as in an Assessment, produces no Meter needle reaction.
+<br></font></p>
+<p><a name="O"><font face="Arial" size="2">O</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Objective Hav">Objective Hav</a>ingness:
+<br>Processes which increase a preclear's havingness by increasing his objective
+duplication.</font></p>
+<p><font face="Arial" size="2"><a name="Objective Pro">Objective Pro</a>cesses:
+(Objective Process:)
+<br>ST level 1 processes which familiarize a person with his environment, the
+physical universe. Objective processes increase a pc's control, communication,
+and havingness on the environment.</font></p>
+<p><font face="Arial" size="2"><a name="Obnosis">Obnosis</a>:
+<br>A word put together from the phrase, &quot;observing the obvious.&quot;
+<br><br>
+OCA Graph: (OCA:)
+<br>A specially prepared graph which plots ten traits of a pc's personality from a personality test taken by the pc. OCA = Oxford Capacity Analysis.
+The personality test is also known as the APA = American Personality Analysis.</font></p>
+<p><font face="Arial" size="2"><a name="Operating Thetan">Operating Thetan</a>:
+(OT:)
+<br>A being who can be at cause knowingly and at will over thought, life, form, matter, energy, space and time, subjective and objective.
+The goal of the Advanced Levels.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Op Pro by Dup">Op Pro by Dup</a>:
+<br>Opening procedure by duplication. A process which increases the preclear's ability to duplicate and so increases his ability to
+communicate. A type of objective process.</font></p>
+<p><font face="Arial" size="2"><a name="Original Thesis">Original Thesis</a>:
+<br>A book by R. Hubbard, written in 1949. Later published under the title 'Dynamics of Life'.</font></p>
+<p><font face="Arial" size="2"><a name="Origination">Origination</a>:
+<br>In auditing: A remark or statement from the pc, that concerns his
+ideas,&nbsp;reactions or difficulties. It is something he says, that is important to
+him, but isn't&nbsp;an answer to the auditor's question. It usually comes
+unexpectedly. It is different from a comment, that is defined as an attempt to distract
+auditor or&nbsp;an attempt to blow session. An auditor is trained in handling originations on
+TR-4.</font></p>
+<p><font face="Arial" size="2"><a name="Out">Out</a>:
+<br>Things which should be there and aren't or should be done or aren't are said to be &quot;out,&quot; i.e., &quot;Enrollment books are out.&quot;</font></p>
+<p><font size="2" face="Arial">Out Int: (Out-Int: Out Interiorization: Out
+Int-Ext:) 1) Out-int means charge has built up on the pc's case after the fact of
+pc going exterior. Going exterior is usually a great win, but sometimes it later
+leads to this case condition known as Out-Int. This type of charge is an 'out
+rudiment' situation so severe that nothing else but this should be addressed on
+the case.<br>
+</font>2) <font size="2" face="Arial">Out Interiorization. Symptoms are:
+Headaches, odd body aches and pains. Effort, Pressures from environment. It can
+also be unwillingness to go into things, down to a physical back-off
+(claustrophobia). An urge to leave can also sometimes be traced back to Out-Int.
+The main symptom is high TA at session start or TA up at Examiner after EP at
+session end. Not all Out-Int cases suffer from high TA, but all who have high TA
+after lots of auditing should first of all be checked for having been audited
+past exterior.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Out-point">Out-point</a>: (Out point:)
+<br>Any one datum that is offered as true that is in fact found to be illogical.</font></p>
+<p><font face="Arial" size="2"><a name="Out Tech">Out Tech</a>:
+<br>Out technology; means that ST is not being applied or is not being correctly applied.</font></p>
+<p><font face="Arial" size="2"><a name="Overrun">Overrun</a>:
+<br>1) Continuing to run an auditing action (in error) past the preclear's attainment of its end phenomena. A person can also be overrun on things
+in life outside of auditing. This is doing something too long that has Engrams connected with it. As a result Engram Chains are being restimulated by life or auditing.&nbsp;<br>
+2) Accumulating protests and upsets about something until it is just a mass of stops.</font></p>
+<p><font face="Arial" size="2"><a name="Overt">Overt</a>:
+<br>1) Overt act; an overt is an aggressive or destructive act by the individual against one or more of the eight dynamics (self, family,
+group, mankind, animals or plants, mest, life or the infinite).<br>
+2) A harmful act. A bad deed.&nbsp; An overt act is an act of omission or
+commission which does the least good for the least number of dynamics or the
+most harm to the greatest number of dynamics.&nbsp;<br>
+3) An aggressive or destructive act
+by the individual against one or more of the eight dynamics<br>
+4) That
+thing which you have done to others, but you aren't willing to have happen to
+yourself.</font></p>
+<p><font face="Arial" size="2"><a name="Overt-Motivator Seq">Overt-Motivator Seq</a>uence:
+(O/M: Overt Motivator:)
+<br>1) The reactive series of events in which someone who has committed an overt &quot;has to&quot; claim the existence of motivators (acts by others
+against self). Motivators are thus used to justify overts and tend to be used to
+justify further overts.<br>
+2) A chain of events of 'pay-back' or revenge that gets worse and worse.
+<br></font></p>
+<p><a name="P"><font face="Arial" size="2">P</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Pain">Pain:<br>
+</a>
+1) The result of an impact or hurt.
+<br>2) (in its various forms) is the indication of an Engram. Composed of heat, cold, electrical and the combined effect of sharp hurting. If one stuck
+a fork in his arm, be would experience pain. When one uses pain in connection with auditing one means awareness of heat, cold, electrical or&nbsp;
+hurting stemming from the Reactive Mind. According to experiments done&nbsp;at
+Harvard, if one were to make a grid with heated tubes going vertically &nbsp;and
+chilled tubes going horizontally and were to place a small current of&nbsp;electricity through
+the lot, the device touched to a body would produce a feeling of pain. It need not be composed of anything very hot or cold or of any high&nbsp;voltage to produce a very intense feeling of pain. Therefore what
+we call pain is itself heat, cold and electrical. If a pc experiences one or&nbsp;more of these from his Reactive Mind, we say he is experiencing
+pain.
+<br>&quot;Electrical&quot; is the bridge between sensation and pain and is
+difficult to&nbsp;classify as either pain or sensation when it exists alone.
+<br>Its symbol is PN.</font></p>
+<p><font face="Arial" size="2"><a name="Pan-Determ">Pan-Determ</a>inism: (Pan
+determined:)
+<br>Broad determinism; the action of determining not only one's own actions, but the actions of others as well, especially to determine the
+activities of two or more sides of a game simultaneously; to become
+<br>pan-determined it is necessary to view a dispute, struggle or game from both sides.</font></p>
+<p><font face="Arial" size="2">Pc, see Preclear.</font></p>
+<p><font face="Arial" size="2">Picture:<br>
+&nbsp;An exact likeness; image. A mental image.</font></p>
+<p><font face="Arial" size="2"><a name="Pleasure moments">Pleasure moments</a>:
+(Pleasure: Moment)
+<br>These are mental image pictures containing pleasure sensations. One seldom addresses them unless the preclear is fixated on some type of
+&quot;pleasure&quot; to a point where it has become highly aberrated.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Postulate">Postulate</a>:
+<br>A conclusion, decision or resolution made by the individual
+himself; to conclude, decide or resolve a problem or to make a plan or set a
+pattern for the future or to nullify a pattern of the past (like in New Years
+resolutions). We mean, by postulate, a self-created truth. A postulate is, of
+course, that thing which the individual uses to start a directed desire or
+order, or inhibition, or enforcement;&nbsp; it is in the form of an idea.
+Postulate means to cause a thinkingness or consideration.</font></p>
+<p><font face="Arial" size="2"><a name="PTS">Potential Trouble Source</a>:
+(PTS:)
+<br>
+1. Somebody who is connected with an SP who is
+    invalidating him, his beingness, his processing, his life, or even his
+group. It is a technical thing. It results in illness and mood swings and is the cause of illness and
+irrational mood swings.
+    <br> 2. The PTS guy is fairly obvious. He's here, he's way
+    up today and he's way down tomorrow and he gets a beautiful session and
+    then he gets terribly ill. That's the history of his life.
+    <br> 3. The mechanism of PTS is environmental menace that
+    keeps something continually keyed-in. This can be a constant recurring
+    somatic or continual, recurring pressure or a mass. The menace in the
+    environment is not imaginary in such extreme cases. The action can be taken
+    to key it out. But if the environmental menace is actual and persists it
+    will just key-in again. This gives recurring pressure unrelieved by usual
+    processing.</font></p>
+<p><font face="Arial" size="2"><a name="Power">Power</a>:
+<br>Grade given if pc did not go Clear on Engram Clearing, Power Processing
+(formerly Grade 5 and 5a). See also Release.</font></p>
+<p><font face="Arial" size="2"><a name="Practical">Practical:<br>
+</a>In Study, The drills and actions which permit the student to use in practice
+the theory he has been taught.&nbsp;
+<br>
+<br><a name="Preclear">Preclear</a>: (PC:)
+<br>From pre-Clear, a person not yet Clear; generally a person being audited, who is thus on the Road to Clear; a person who, through ST&nbsp;processing, is finding out more about himself and life.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Preclear InfoSheet">Preclear Information Sheet</a>:
+(White Form: PC Info Sheet:)
+<br>A form done with new preclears, or pc's who haven't been audited for some time (years). Doing the Form with a pc gives certain basic data that is necessary for the Case Supervisor. It is done by an
+auditor in session.</font></p>
+<p><font face="Arial" size="2"><a name="Pre-Hav">Pre-Hav</a>: (Havingness) Scale
+<br>A scale giving degrees of doingness or not doingness.</font></p>
+<p><font face="Arial" size="2"><a name="Pre-OT">Pre-OT</a>: (Pre OT: PreOT:)
+<br>A person, having achieved the state of Clear, now working towards the state of OT, Operating Thetan.</font></p>
+<p><font face="Arial" size="2"><a name="Prepared Lists">Prepared List</a>:<br>
+The auditor, trained in using a Meter, can use prepared (printed) lists to
+find the specific problem or difficulty he needs to address to get the preclear
+out of an unpleasant or puzzling situation in session. The list will contain
+all the possible difficulties for that action and the Meter will tell the
+auditor which ones to take up. A prepared list may turn up one
+thing or many things, that should be tackled before the routine process should
+be taken up again. Prepared lists can also be used to address a troubling area
+of pc's life and 'clean it up'.</font></p>
+<p><font face="Arial" size="2"><a name="Prepcheck">Prep-check</a>: (Prepcheck:
+Prep check:)
+<br>An auditing action in which a subject found to be charged is discharged by the use of a prepared list of buttons (called the
+Prep-check Buttons). Buttons such as 'Suppressed', 'Invalidated', 'Didn't
+Reveal', etc. are used to find charge and reactivity connected with the subject
+being prep-checked. There are 20 Prep-check buttons on the list.</font></p>
+<p>
+<font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Present Time">Present Time</a>:
+<br>That which is now and which becomes the past almost as rapidly as it is observed. It is a term that refers to the environment as it exists now,
+not as it existed; as in the phrase &quot;the preclear came up to present time,&quot; it means the preclear became aware of the existing matter, energy,
+space and time of now.</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="PTP">Present Time Problem</a>: (PTP:)
+<br>A specific problem that exists in the physical universe
+now, on which a person has his attention fixed. This can be practical matters he
+feels he ought to do something about right away. Any set of circumstances that
+occupies the pc's attention, so he feels he should do something about it
+instead of being audited.</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Pressure Somatic">Pressure Somatic</a>: (Pressure: Somatic)
+<br>In Engram running, considered to be a symptom in a Lock, Secondary or Engram, simply part of the content. The pc feels a physical pressure
+stemming from the Bank.</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Prior Assess">Prior Assess</a>ment: (Prior: Assessment)
+<br>An Assessment done in Engram running in which a time period prior to a
+significant occurrence, accident, or change happened in pc's life. Example: In
+the Engram Drug RD you find what somatics, misemotions and pains the pc had
+prior to taking drugs. The idea is, those troubles caused him to take up drugs
+and may still be present.</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Prior read">Prior read</a>: (Prior: read)
+<br>Reads which occur prior to the completion of the major thought. (Major thought is the complete thought being expressed in words by the
+auditor.) It is not used in auditing.</font></p>
+<p>
+<font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Problem">Problem</a>: (Prob: Probl:)
+<br>Anything which has opposing sides of equal force; especially postulate-counter-postulate, intention-counter-intention or
+idea-counter-idea; an intention-counter-intention that worries the
+<br>preclear.</font></p>
+<p><font face="Arial" size="2"><a name="Process">Process</a>:
+<br>A specific technique used in auditing (processing). There are many
+processes. They consist of carefully worded questions and commands. The are used
+by an auditor in a formal session to help his preclear.</font></p>
+<p><font face="Arial" size="2">Processing: <a href="#Auditing"> See Auditing.</a></font></p>
+<p><font face="Arial" size="2"><a name="Product">Product</a>:
+<br>A finished high-quality service or article in the hands of the consumer in exchange for a valuable.</font></p>
+<p><font face="Arial" size="2"><a name="Program">Program</a>:
+<br>A program is the overall plan of auditing of a specific pc. A program is the sequence of actions session by session to be undertaken
+on a case by the C/S in his directions to the auditor or auditors,
+<br>auditing the case.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Psychosomatic">Psychosomatic</a>:
+(Psycho-somatic: Psycho somatic:)
+<br>&quot;Psycho&quot;, of course, refers to mind and &quot;somatic&quot; refers
+to body; the term&nbsp; psychosomatic means the mind making the body ill or illnesses
+which have&nbsp;been created physically within the body by derangement of the mind.
+<br>&nbsp;
+<br></font></p>
+<p><a name="Q"><font face="Arial" size="2">Q</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Quad Flow">Quad Flow</a>s: (Quad:
+Quads:)
+<br>(Four Flows) To run a process Quad Flows means,&nbsp; the four flows--another to self, self to another,
+another to another, and self to self --are run on a preclear by an auditor.</font></p>
+<p><font face="Arial" size="2"><a name="Q and A">Q and A</a>: (Q&amp;A:)
+<br>Stands for Question and Answer. A failure to complete a cycle of action; to fail to complete a cycle of action; to deviate from an intended
+course of action; questioning the preclear's answer; in auditing, it's a failure to complete a cycle of action on a preclear.</font></p>
+<p><font face="Arial" size="2"><a name="Qual">Qual</a>:&nbsp;
+<br>The Qualifications<font color="#C0C0C0">:</font> Division - office taking care of quality control.&nbsp; Students,
+auditors, and pc's can receive different services here: students and auditors
+are examined and they may receive cramming or special&nbsp; assistance. Also
+where students and pc's are awarded a certificate upon completion of training
+and&nbsp; auditing (see also Review).</font></p>
+<p><font face="Arial" size="2">Qual Sec:
+<br>Qualifications Secretary:, the head of the Qualifications Division.</font></p>
+<p><font face="Arial" size="2"><a name="Quickie">Quickie</a>:
+<br>Means omitting actions, for whatever reason, that would satisfy all demands
+or requirements and instead doing something superficially and accomplish less
+than could be achieved.
+<br></font></p>
+<p><a name="R"><font face="Arial" size="2">R</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Randomity">Randomity</a>:
+<br>The ratio of unpredicted motion to predicted motion.</font></p>
+<p><font face="Arial" size="2"><a name="Reach/Withdraw">Reach/Withdraw</a>: (Reach:
+Withdraw:)
+<br>Basic process in assists. Works also well when processing animals, small children,
+or people who are ill.</font></p>
+<p><font face="Arial" size="2">Reactive Bank: See <a href="#REACTIVE MIND"> Reactive
+Mind</a>, <a href="#Bank">Bank</a>.</font></p>
+<p><font face="Arial" size="2"><a name="REACTIVE MIND">Reactive Mind</a>:<br>
+ The portion of the mind which works on a
+stimulus-response basis (given a certain stimulus it will automatically give a
+certain response) which is not under a person's volitional control and which
+exerts force and power over a person's awareness, purposes, thoughts, body and
+actions. The Reactive Mind never stops operating. Pictures of the environment,
+of a very low order, are taken (recorded) by this mind even in some states of
+unconsciousness.</font></p>
+<p><font face="Arial" size="2"><a name="Read">Read</a>:
+<br>The action of the needle on the Meter dial falling (moving to the right); SF, F, LF, LFBD are reads.</font></p>
+<p><font face="Arial" size="2"><a name="Reality">Reality</a>:<br>
+Has to do with agreement (or lack thereof). It is the agreed upon
+apparency of existence. A reality is any data that agrees with the person's
+perceptions, way of thinking and education. Reality is one of the components of
+understanding. Reality is what is.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Recall">Recall</a>:
+<br>Present time remembering something that happened in the past. It is &quot;not&quot; re-experiencing it, reliving or re-running it. You are in
+present time, thinking of, remembering, putting your attention on something that
+happened in the past--all done from present time.</font></p>
+<p><font face="Arial" size="2"><a name="Rehabilitation">Rehabilitation</a>:
+(Rehab: Rehabilitate:)
+<br>The restoration of some former ability or state of being or some more optimum condition.</font></p>
+<p><font face="Arial" size="2"><a name="Release">Release</a>:<br>
+A preclear whose Reactive Mind or some major portion of it is keyed out and is not influencing him. In ST processing there are five major Grades&nbsp;of
+Release. They are, from the lowest to the highest: Grade 0, Communications Release, Grade
+1, Problems Release, Grade 2, Relief Release, Grade 3, Freedom Release, Grade 4,
+Ability Release. Beyond that
+other Grades have been developed: Grade V Power Release, Grade VA Power Plus Release, Grade VI Whole Track
+Release.&nbsp;<br>
+ These additional Grades are unnecessary if pc goes Clear on Engram
+Clearing. Each is a distinct and definite step toward greater levels of awareness and ability. (See also Grade).</font></p>
+<p><font face="Arial" size="2"><a name="Repair">Repair</a>:
+<br>Patching up past auditing or recent life errors. This is done by prepared lists and other processes or completing an incomplete process.</font></p>
+<p><font face="Arial" size="2"><a name="Repeater technique">Repeater technique</a>:&nbsp;
+<br>A Engram running technique given in the book &quot;Dianetics: The Modern Science of Mental Health&quot; (1950) in which the auditor would have the
+preclear repeat over and over certain phrases found in Engrams being run. It was often used to handle command phrases with.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="repet Process">Repetitive Process</a>:&nbsp;<br>
+A process, where the same auditing question or
+command is given many times to the pc. The pc is finding new answers every time.
+The auditor will state the command as it has never been asked before in a new
+unit of time, but with no variation of words; he will acknowledge the pc's answer and
+handle the pc origins by understanding and acknowledging what the pc said. This
+type of process will permit the individual to examine his mind and environment thoroughly
+and sort out relative importances.</font></p>
+<p><font face="Arial" size="2">Resistive Case: See Seven Resistive Cases.</font></p>
+<p><font face="Arial" size="2"><a name="Restimulation">Restimulation</a>:
+(Restimulate:)
+<br>Condition in which part of the Bank has been &quot;triggered&quot; by
+something in the person's environment (a restimulator) causing some greater or lesser
+degree of reactive behavior or condition; doing something unknowingly, unwittingly and without any understanding of what one is doing.</font></p>
+<p><font face="Arial" size="2"><a name="Retread">Retread</a>:
+<br>The student auditor's weak areas are located and the auditor is Word Cleared
+on the appropriate materials and he then restudies selected materials. The
+auditor is given a longer study assignment that covers possible areas of
+his difficulties. It has to cover more than the obvious points since those
+points were already covered in previous Cramming Actions. A retread can take
+from one to several days to complete.</font></p>
+<p><font face="Arial" size="2"><a name="Reverie">Reverie</a>:
+<br>The preclear is placed in a light state of &quot;concentration&quot; which is
+not to be confused with hypnosis. The analytical mind of the preclear while reduced in its potential and under direction, is still capable of
+thinking its own thoughts and forming its own opinions.</font></p>
+<p><font face="Arial" size="2"><a name="Review">Review</a>:
+<br>When a preclear is having difficulty of some sort that is not immediately
+resolving with the actions being done, he may be sent to the Qualifications Division, where his case folder is
+carefully checked over or &quot;reviewed&quot; and the necessary corrective&nbsp;actions taken to resolve the difficulty. The actions done in this manner
+are collectively called &quot;review&quot;.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="R-Factor">R-Factor</a>:
+<br>Reality factor; explanation, information, data, etc., given to a person in order to bring about sufficient understanding for him to be able to
+perform a specific action. It is usually very short, like a few sentences.</font></p>
+<p><font face="Arial" size="2"><a name="Ridges">Ridges</a>: (Ridge:)
+<br>Are solid accumulations of old, inactive energy suspended in space and time. They are generated by opposing energy flows hitting one another
+and continue to exist long after the energy flows have ceased. Ridges exist in suspension around a person.</font></p>
+<p><font face="Arial" size="2"><a name="Rise">Rise</a>:
+<br>A needle phenomena where the needle moves to the auditor's left (auditor facing the Meter); a rising needle means &quot;no confront&quot;--the
+preclear has struck an area or something he isn't confronting. One never calls his
+attention to this but one knows what it is. It is not taken up in ST
+auditing.</font></p>
+<p><font face="Arial" size="2"><a name="Rock Slam">Rock Slam:</a>  (Symbol RS:
+R/S:)
+<br>This is a crazy, irregular, jerky motion of the needle of the Meter, narrow as one inch or as wide as three inches happening several times a
+second. The needle &quot;goes crazy,&quot; slamming back and forth, narrowly, widely, over on the left, over on the right, in a mad war dance or as if
+it were frantically trying to escape. It means &quot;hot terminal&quot; or
+&quot;hot&quot; anything in an Assessment and takes precedence over a fall.</font></p>
+<p><font face="Arial" size="2">Roller coaster:
+<br>1. A case that betters and worsens. A roller-coaster is
+    always connected to a suppressive person and will not get steady gains until
+    the suppressive is found on the case or the basic suppressive person
+    earlier. Because the case doesn't get well he or she is a potential
+    trouble source to us, to others and to himself.
+    
+    <br> 2. Case gets better, gets worse, gets better, gets worse.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Rudiments">Rudiments</a>
+<br>&nbsp;First principles, steps, stages or conditions. The basic actions
+done at the beginning of a session to set up the pc for the major session
+action. The normal rudiments are ARC breaks (upsets), Present Time Problems
+(worries) and Withholds (something pc feels he shouldn't say) - they are explained
+under each heading.
+<br><br>
+Routine-3-RA: (R3RA: R-3-RA:)<br>
+Engram running by Chains, Routine-3-RA is main process used in
+Engram Clearing, ST-5.</font></p>
+<p><font face="Arial" size="2">Run:
+<br>Undergo processing; run out; erase.</font></p>
+<p><font face="Arial" size="2"><a name="Rundown (R/D)">Rundown: (R/D: RD:)</a>
+<br>A series of specific auditing actions done on a case designed to produce a specific result.
+<br></font></p>
+<p><a name="S"><font face="Arial" size="2">S</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Sad effect">Sad effect</a>:
+<br>When an ARC break is permitted to continue over too long a period of time and remains in restimulation a person goes into a &quot;sad effect&quot;
+which is to say they become sad and mournful.</font></p>
+<p><font face="Arial" size="2"><a name="Scientologie">Scientologie</a>:
+(Scientology: Scn:)
+<br>&nbsp;(Scn): An applied religious philosophy. It deals
+with the study of knowledge, which through the application of its technology can
+bring about desirable changes in the conditions of life. (Taken from the Latin
+word scio, knowing in the fullest sense of the word, and the Greek word logos,
+to study.) A body of knowledge which, when properly used, gives freedom and
+truth to the individual. It was originally founded by the German philosopher A.
+Nordenholz, who in 1934 published a book &quot;Scientologie&quot; in Munich,
+Germany. In it's present form it is based in its entirety on R. Hubbard's work,
+that saw it as his purpose to gather wisdom and truth from many sources, refine
+it and make it into one body of work. As this is an effort pursued by many
+philosophers through the ages, we keep the spelling of A. Nordenholz: 'Scientologie'.
+We use however 'Scn' throughout the manual. R. Hubbard called his main
+body of work for Scientology™.</font></p>
+<p><font face="Arial" size="2">You could say ST is the auditing technology part of Scn.
+Scn is a broader subject. It includes philosophy covering the character of life,
+death, Man, the spirit, the mind, and the physical universe; but also subjects like, Ethics,
+Administration and Management, Logic and Data Analysis.</font></p>
+<p><font face="Arial" size="2">Scientology:™<br>
+Scientology™ is a trademarked word. Since wisdom and
+trademarks are inconsistent with each other, we use Scientologie. Trademarks
+belong to commercial interests. Wisdom belong to culture and scholars.</font></p>
+<p><font face="Arial" size="2"><a name="SandD">Search and Discovery</a>:
+(S&amp;D: S &amp; D: S and D:)
+<br>A listing &amp; Nulling process to find a suppressive person on a case and
+thus handle a PTS person.</font></p>
+<p><font face="Arial" size="2">Seagull:<br>
+Jonathan Livingston Seagull. A symbolic book by Richard Bach about a
+seagull passing the ability to fly (symbolic for wisdom and ability) onto new
+generations of seagulls. The seagull is the symbol for ST and Clearbird Publishing, who publishes ST.</font></p>
+<p><font face="Arial" size="2">Sec: Secretary:, security:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Secondary">Secondary</a>:
+<br>A Secondary is a mental image picture of a moment of severe and shocking loss or threat of loss which contains misemotion such as anger, fear,
+grief, apathy or &quot;deathfulness.&quot; It is a mental image picture
+recording of a time of severe mental stress. It may contain unconsciousness.</font></p>
+<p><font face="Arial" size="2">Second Dynamic: ( 2 Dyn: 2D:) See <a href="#Dynamics"> Dynamics.</a></font></p>
+<p><font face="Arial" size="2"><a name="Self-auditing">Self-auditing</a>:
+<br>1) The manifestation of going around running concepts or processes on one's self. It violates auditor plus PC is greater than the Bank (&quot;Auditors
+Trust&quot;).<br>
+2) Trying to run processes on oneself. Processes are designed to be administered
+by an auditor on a pc. The communication and control of the auditor is what
+makes auditing effective.&nbsp;</font></p>
+<p><font face="Arial" size="2">Self Analysis: (SAL:)
+<br>A book by R. Hubbard. Teaches recall processes that a pc can run on himself.</font></p>
+<p><font face="Arial" size="2"><a name="Self-Determinism">Self-Determinism</a>:
+<br>The ability to regulate and take responsibility for one's own considerations and actions; motivation by the thetan rather than by the environment.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Sensation">Sensation</a>:
+<br>(In its various forms) is the indication of a Secondary, which precedes the actual Engram. All uncomfortable perceptions stemming from the
+Reactive Mind are called sensation. These are basically &quot;pressure,&quot; &quot;motion,&quot; &quot;dizziness,&quot; &quot;sexual sensation,&quot; and
+&quot;emotion and misemotion.&quot;
+<br>There are others, definite in themselves but definable in these five general categories. If one took the fork in the pain definition above
+and pressed it against the arm, that would be &quot;pressure.&quot;
+&quot;Motion&quot; is
+<br>just that, a feeling of being in motion when one is not. &quot;Motion&quot; includes the &quot;winds of space,&quot; a feeling of being blown upon
+especially from in front of the face. &quot;Dizziness&quot; is a feeling of
+disorientation and includes a spinniness, as well as an out-of-balance feeling. &quot;Sexual
+sensation&quot; means any feeling, pleasant or unpleasant, commonly experienced during sexual restimulation or action. &quot;Emotion and
+misemotion&quot; include all levels of the complete tone scale except
+&quot;pain&quot;;
+<br>emotion and misemotion are closely allied to &quot;motion,&quot; being only a
+finer particle action. A Bank solidity is a form of &quot;pressure,&quot; and
+when the sensation of increasing solidity of masses in the mind occurs, we say &quot;the Bank is beefing up.&quot; All these are classified as
+sensation.
+<br>Symbol SEN.</font></p>
+<p><font face="Arial" size="2">Service Computation: or <a name="Service Facsimile">Service Facsimile</a>:
+(Service Fac: Service Comp:)
+<br>Serv Fac, a ST level 4 term. The service computation is that computation generated by the preclear (not the Bank) to make self right and others
+wrong; to dominate or escape domination and enhance own survival and injure that of others.</font></p>
+<p><font face="Arial" size="2"><a name="Session">Session</a>:
+<br>1) A precise period of time during which an auditor audits or processes a
+preclear. That's an auditing session.<br>
+2) In coaching it is a precise period during which the coach instructs the
+student in a specific drill using his coaching instructions and written
+materials to correct the student. That's a coaching session.</font></p>
+<p><font face="Arial" size="2">Seven Resistive Cases<br>
+Seven types of Resistive Cases, including
+drug history, former practices, and severe illness.
+Assessment on a resistive case is done to locate and solve the reasons for its
+resistiveness.
+<br>This is item number 40 on the Green Form (<a name="GF 40">GF 40</a>). It is a
+specially prepared list of items with actions to be done for each item to
+resolve the situation.</font></p>
+<p><font face="Arial" size="2"><a name="Small Fall">Small Fall</a>: Symbol SF
+<br>A Meter needle reaction in which the needle moves rapidly to the right a quarter to half an inch.</font></p>
+<p><font face="Arial" size="2"><a name="Somatic">Somatic</a>:
+<br>Essentially body sensation, illness or pain or discomfort. &quot;Soma&quot;
+means body; hence Sensations or pains stemming from the mind. A pain or ache, sensation and also misemotion or even
+unconsciousness. There are a thousand different descriptive words that could add up
+to a &quot;feeling&quot;. Pain, aches, dizziness, sadness--these are all
+FEELINGS. Thus in Incident running we ASK FOR AND FOLLOW DOWN ONLY FEELINGS.
+<br>Those can be aches, pains, sensations, misemotion--any FEELING.
+<br>&quot;Somatics:&quot; This is a general word for uncomfortable perceptions
+coming from the Reactive Mind. Its genus is early Engram running and it is a general, common package word, used by ST practitioners to denote&nbsp;&quot;pain&quot; or &quot;sensation&quot; with no difference made between them.&nbsp;To understand the source of these feelings, one should have a knowledge&nbsp;of Engrams, ridges and other parts of the Reactive Bank. Anything is a SOMATIC if it emanates from the various
+part of
+the Reactive Mind and produces an awareness of reactivity. Symbol SOM.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Stable Datum">Stable Datum</a>:
+<br>Any body of knowledge, more particularly and exactly, is built from one datum. That is its stable datum. Invalidate it and the entire body of
+knowledge falls apart. A stable datum does not have to be the correct one. It is simply the one that keeps things from being in a confusion
+and on which others are aligned.</font></p>
+<p><font face="Arial" size="2">ST: See Standard Clearing Technology below</font></p>
+<p><font face="Arial" size="2"><a name="Stage Four">Stage Four</a>:
+<br>A needle reaction on the Meter in which the needle rises, sticks, falls, about once a second or two. It is very regular, always the same
+distance, always the same pattern, over and over. It reacts on nothing the auditor or pc says.</font></p>
+<p><font face="Arial" size="2"><a name="ST">Standard Clearing Technology</a>:
+(ST:)<br>
+ A clearing technology, mainly defined and developed by R.
+Hubbard. It's applied by an auditor to a preclear in a formal
+session. The goal is the spiritual betterment of the preclear. The application of the
+processes and technology will bring about this change and a change in the pc's
+conditions and life. For short we use the letters ST to mean Standard Clearing
+Technology in this manual.</font></p>
+<p><font face="Arial" size="2"><a name="Standard Tech">Standard Tech</a>nology: (standard
+tech:)
+<br>That tech which has absolutely no arbitraries; correct exact duplication of Source in application; the exact processes and auditing actions laid
+down and used for the invariable resolution of cases. This was defined this
+way&nbsp;by R. Hubbard in 1968. 'Source' being a name or title for R. Hubbard. Standard
+Clearing Technology defines it differently. We are only interested in if it works.
+In practice Standard Tech and Standard Clearing Technology is the same thing.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Static">Static</a>:
+<br>&quot;A life static has no mass, no motion, no wave length, no location in space or in time. It has the ability to postulate and to perceive&quot;
+(Axiom 1). A philosophical word for the thetan, (used in the Axioms) implying
+native state before the thetan had contact with the physical universe and got
+all messed up.</font></p>
+<p><font face="Arial" size="2"><a name="ST Meter">ST  Meter</a>:
+<br>Electro-psycho meter, E-meter or simply Meter. An electronic instrument for measuring the mental
+state and change of state in individuals as an aid to precision and speed in
+auditing.
+<br>&nbsp;Its purpose is to assist the auditor to locate in his pc's areas of
+mental charge so that be can assist in the relief of spiritual
+suffering.<br>
+The ST Meter is not intended for medical or physical treatment or the
+diagnosis, treatment or prevention of any disease. By itself it does nothing and is strictly not
+ to be employed for medical purposes.</font></p>
+<p><font face="Arial" size="2">Steering the pc: (Steering:)
+<br>The only use of latent or random reads. You see a read the same as the instant read occurring again when you are not speaking but after you have
+found a whole thought reacting. You say &quot;there&quot; or &quot;that&quot;
+and the pc, seeing what he or she is looking at as you say it recovers the knowledge
+from the Reactive Bank.</font></p>
+<p><font face="Arial" size="2">Sticky needle: See <a href="#Dirty Needle:"> Dirty
+needle</a>.</font></p>
+<p><font face="Arial" size="2">Summary Report Form:
+<br>Written by the Auditor after the session on a fill-in type standard form and is simply a short record of what happened and what was observed
+during the session. It is stapled onto the top of the worksheets.</font></p>
+<p><font face="Arial" size="2"><a name="Supervisor">Supervisor</a>:
+<br>The supervisor is the person that runs a training course. He or she is
+neither a teacher nor an instructor. The supervisor ensures the students use the
+Study Technology correctly and gets the students through the course to a good
+result.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2">Suppressive Person: (<a name="SP">SP</a>:)
+<br>One who is battling constantly in covert ways to make others less powerful and less able because of imagined danger to himself. The SP is
+actually stuck on the Time Track at some point in the distant past long forgotten. Such a person may even appear sane but in fact is quite
+insane and incapable of viewing anything for what it actually is, regarding others as constant threats to himself and operating to destroy
+those around him.
+<br></font></p>
+<p><a name="T"><font face="Arial" size="2">T</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Technical bulletin">Technical bulletin</a>:<br>
+Hubbard Communications Office Technical Bulletin
+<br>(HCOB:). These essays and research papers contain the original statement of
+most of the technology contained in ST and were written by R. Hubbard between
+1961 and 1982.</font></p>
+<p><font face="Arial" size="2">Technical Division: <a name="Tech Div"> Tech Div</a>:&nbsp;
+<br>That part of an organization which routinely delivers auditing and training
+services.&nbsp;<br>
+ It handles the technology, thus it is the Tech Div.</font></p>
+<p><font face="Arial" size="2"><a name="Technology">Technology</a>:
+<br>The know-how needed for&nbsp; practical and useful application of an art or
+science as opposed to mere knowledge of the science itself.&nbsp;<br>
+2) A technology is how you do something or a device or field based on
+scientific principles that has a practical purpose, such as 'computer
+technology'. Abbr. Tech.</font></p>
+<p><font face="Arial" size="2"><a name="Terminal">Terminal</a>:
+<br>Anything that can receive, relay or send a communication (most common
+usage); also, anything with mass and meaning.&nbsp;&quot;Terminal&quot; means in our language &quot;the end point of a
+communication line&quot;. It can be a person or a thing.</font></p>
+<p><font face="Arial" size="2"><a name="Theta">Theta</a>:
+<br>Energy peculiar to life or a thetan which acts upon the material in the physical universe and animates it, mobilizes it and changes it; natural
+creative energy of a thetan which he can direct toward survival
+<br>goals, especially when it manifests itself as high-toned constructive communications.</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Theta Bop">Theta Bop</a>:
+<br>A small or wide steady dance of the needle. Over a spread of one-eighth of an inch and, depending on sensitivity setting, it can be as wide as half an
+inch. The needle goes up and down perhaps five or ten times a second. It goes up, sticks, falls, sticks, goes up, sticks, etc., always the
+same distance like a slow tuning fork. It is a constant distance and a constant speed. A theta bop means &quot;death,&quot; &quot;leaving,&quot;
+&quot;don't want to be here.&quot; It is caused by a yo-yo of the preclear as a thetan vibrating out
+<br>and into the body or a position in the body.</font></p>
+<p><font face="Arial" size="2"><a name="Thetan">Thetan</a>:
+<br>From THETA (life static), a word taken from the Greek symbol or letter:
+<br>theta, traditional symbol for thought or spirit. The thetan is the individual himself--not the body or the mind. The thetan is the
+&quot;I&quot;; one doesn't have or own a thetan; one <u> is</u> a thetan.</font></p>
+<p><font face="Arial" size="2"><a name="Tick">Tick</a>:
+<br>Small jerk of the needle.</font></p>
+<p><font face="Arial" size="2"><a name="Time track:">Time track:</a> Track
+<br>1) The endless record complete with 55 perceptions of the pc's entire past; the consecutive record of mental image pictures which accumulates
+through the preclear's life or lives. It is very exactly dated.
+<br>
+2) The consecutive record of mental image pictures
+which accumulates through the preclear's existence. The Time Track is
+a very accurate record of the pc's past, very accurately timed and very
+obedient to the auditor. If a motion picture film were 3D, had fifty-two
+perceptions and could fully react upon the observer, the Time Track could
+be called a motion picture film.</font></p>
+<p><font face="Arial" size="2"><a name="Tone Arm">Tone Arm</a>: TA:
+<br>Meter control lever on the Meter.</font></p>
+<p>
+<font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Tone arm action">Tone arm action</a>: (TA: TAA:)
+<br>Movement of the Tone Arm of the Meter,&nbsp; when it has to be moved more than one tenth of a division
+to keep the needle at set (except during body movement).<br>
+These many small motions are added up and you get&nbsp; the total number of divisions
+a Tone Arm has moved in a period of time such as twenty minutes or two and a half hour session. Tone arm
+action denotes a change, and therefore, that case gain for the preclear is occurring.</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Tone 40">Tone 40</a>:
+<br>Intention without reservation or limit; an execution of intention.</font></p>
+<p>
+<font face="Arial" size="2">
+Tone scale: (Tonescale: Tone-scale:)
+<br>The basic tone scale is a scale of emotions, from apathy to enthusiasm.
+Different levels of the tone scale have other characteristics visible in
+behavior and as potential survival (see also Uptone).</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Touch Assist">Touch Assist</a>:
+<br>An assist that brings the person's attention to injured or affected body areas. When attention is withdrawn from them, so is circulation, nerve
+flows and energy, which for one thing limits nutrition to the area, and for another limits the drainage of waste products. Some ancient healers
+attributed remarkable flows and qualities to the &quot;laying on of
+hands.&quot; Probably the workable element in this was simply heightening awareness
+of the affected area and restoring the physical communication.
+<br><br>
+Training Routines: ( <a name="TRs"> TRs</a>: TRs: TR:)
+<br>Training drills: on ST courses which train students to prefect their communication skills to the level needed by an
+auditor in session.&nbsp;<br>
+The TRs take up and drill the component parts of communication. Good TRs are
+the&nbsp;'Carrier wave' needed to make processes work.&nbsp; Specific auditor skills in
+communication
+and smooth session control are gained in doing the TRs.</font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Two-way comm">Two-way comm</a>: (TWC: 2WC:)
+<br>Two-way communication: Are the precise process of getting somebody to open up and give emotional or
+personal information about himself. It is not chatter. It is governed by the
+rules of auditing.&nbsp;</font></p>
+<p>
+<font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p>
+<font face="Arial" size="2">
+<a name="Twin">Twin</a>:
+<br>The study partner with whom one is paired. Two students studying the same subject who are paired to checkout or help each other are said to
+be &quot;twinned.&quot;
+<br></font></p>
+<p><a name="U"><font face="Arial" size="2">U</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="Unburdening">Unburdening</a>:
+(unburden:)
+<br>In Engram running: As a basic is not at once available on any Chain one usually
+&quot;unburdens&quot; it by running later Engrams (closer to present time), Secondaries and
+Locks. The act of unburdening would be digging off the top to get at the bottom as in moving sand. As you run off later incidents, the ability of
+the preclear to confront it also increases and basic is easy to run when finally contacted.</font></p>
+<p><font face="Arial" size="2"><a name="Understanding">Understanding</a>:
+<br>Composed of affinity, reality and communication. These three things are necessary to the understanding of anything. One has to have some
+affinity for it, it has to be real to him to some degree and he needs some communication with it before he can understand it. Greater
+<br>understanding comes about by increasing any one of these three factors.&nbsp;</font></p>
+<p><font face="Arial" size="2"><a name="Unmocking">Unmocking</a>: (Unmock:)
+<br>Attempting to reduce or make disappear, make nothing of.</font></p>
+<p><font face="Arial" size="2">Upper Indoc: (indoctrination) TRs (TRs 6 to 9)
+<br>Purpose of these four training drills is to bring about in the student the willingness and ability to handle and control other people's bodies
+and to cheerfully confront another person while giving that person commands. Also to maintain a high level of control under any circumstances.</font></p>
+<p><font face="Arial" size="2"><a name="Uptone">Uptone</a>: (Up-tone:)
+<br>At a high level of survival or state of being, plotted on the tone scale. A person who is uptone, or high-toned, has a greater ability to
+handle his facsimiles, to control his environment and has a greater
+<br>degree of survival than someone who is downtone, or low-toned.
+<br></font></p>
+<p><a name="V"><font face="Arial" size="2">V</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="VFP">Valuable Final Product</a>: (VFP:)
+<br>Something that can be exchanged with other activities in return for
+support/money.</font></p>
+<p><font face="Arial" size="2"><a name="Valence">Valence</a>:
+<br>Is the assumption at the reactive level by one individual of the characteristics of another individual. An individual may have a number
+of valences which he puts on and off as he might hats. Often these
+<br>changes are so marked that an observant person can notice him dropping one valence and putting on another. The shift from valence to valence is
+usually completely outside the awareness and control of the individual doing so. In other cases an individual has one valence, not his own, in
+which he is thoroughly stuck.</font></p>
+<p><font face="Arial" size="2"><a name="Visio">Visio</a>:
+<br>Perceptic. Ability to see in facsimile form something one has seen earlier so that one sees it again in the same color, dimension scale,
+brightness and detail as it was originally viewed.</font></p>
+<p><font face="Arial" size="2"><a name="Vitamins">Vitamins</a>:/Minerals: Table<br>
+The tables below provide the basic data on how the
+vitamins and minerals should be mixed to make up a balanced supplement. They are
+the basic supplement recommended to be used after the Cleansing RD is complete. This basic mega-dose is
+recommended to take while in auditing. The higher body weight the closer to the
+maximum the pc should take. You may want to consult the book &quot;Clear Body,
+Clear Mind&quot; and also your local health food store. Pre-packed small bags
+with all the needed vitamins/minerals may be available as a commercial
+product.&nbsp;</font></p>
+<blockquote>
+<p><font face="Arial" size="2"><u>Vitamins Table</u> (IU = International Units. Mg=
+milligrams)<br>
+This table shows the vitamins and the daily dose recommended during
+auditing.&nbsp;<br>
+Niacin 50-100 mg.<br>
+Vitamin A 5000 IU<br>
+Vitamin D 400 IU<br>
+Vitamin C 250 to 1000 mg.<br>
+Vitamin E 800 IU<br>
+Vitamin B complex: 2 tablets.<br>
+Vitamin B1 350 to 600 mg.</font></p>
+  <p><font face="Arial" size="2"><u>Mineral Table</u><br>
+  The following table shows the approximate mineral amounts found to
+  give best results. Amounts in milligrams (mg). Usually it will be found in this
+  ratio in tablets commercially sold. Calcium and Magnesium may be in separate
+  tablets.&nbsp;
+  Consult a health food store.</font></p>
+  <p><font face="Arial" size="2">Calcium: 500 to 1000 mg<br>
+  Magnesium: 250 to 500 mg<br>
+  Iron: 18-36 mg<br>
+  Zinc: 15-30 mg<br>
+  Manganese: 4-8 mg<br>
+  Copper: 2-4 mg<br>
+  Potassium: 45-90 mg&nbsp;<br>
+  Iodine: 0.225 to 0.450 mg&nbsp;</font></p>
+  <p><font face="Arial" size="2">Cal-Mag: 1-2&nbsp; glasses (Calcium-Magnesium drink.
+  Available in powder form under different commercial names. <a href="#Cal-Mag">See
+  Cal-Mag Formula</a>).</font></p>
+  <p><font face="Arial" size="2">(Note: The number of each vitamin/mineral tablet to be
+  taken would depend upon the strength of the tablets used. Several smaller
+  tablets are easier to absorb for the body than one large one.)</font></p>
+</blockquote>
+<p>&nbsp;</p>
+<p><a name="W"><font face="Arial" size="2">
+W</font></a><font face="Arial" size="2">:</font></p>
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2"><a name="What's it">What's it</a>: (Whats it:)
+<br>Pc saying 'what's-it what's-it what's-it that's wrong with me.&quot;</font></p>
+<p><font face="Arial" size="2"><a name="What's-it-line">What's-it-line</a>: (Whats-it
+line:)
+<br>From the auditor to the pc. The auditor is saying &quot;what is it?&quot;
+This causes the Tone Arm to move upwards, indicating restimulated but unresolved charge. The
+pc using the itsa line, from pc to auditor, says &quot;Itsa&quot; it-s-a, and
+the charge flows off the case causing the TA to go down and the charge to
+disintegrate.</font></p>
+<p><font face="Arial" size="2"><a name="Whole Track">Whole Track</a>:
+<br>The moment to moment record of a person's existence in this universe in picture and impression form.</font></p>
+<p><font face="Arial" size="2"><a name="Withhold">Withhold</a>:<br>
+An undisclosed harmful (contra-survival) act. After having
+committed an overt, the person wants to keep it hidden or secret. So he/she withholds the
+overt.</font></p>
+<p><font face="Arial" size="2"><a name="WORDCLEAR">Word:</a><br>
+A symbolic sound-code (spoken word). Words are symbols, part of the physical
+universe because they are designed to be transmitted through a physical universe
+system. It can be spoken words or printed words.<br>
+<br>
+</font><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2">
+Word Clearer:<br>
+A practitioner who is qualified in and uses the technology of word
+clearing.&nbsp;</font></p>
+<p><font face="Arial" size="2"><a name="Word Clearing">Word Clearing</a>:
+<br>An auditing procedure used to locate and clear words the student or
+<br>preclear has misunderstood in his studies of ST or earlier subjects he has studied.</font></p>
+<p>
+<font face="Arial" size="2">
+<br>
+Word Clearing Correction List:, (WCCL:),&nbsp;<br>
+1) Used to handle any upsets or high or
+low TA occurring during or shortly after word clearing. Assessed M5 . EP
+is all reading items handled to F/N and pc again running well or ready to go
+back to study.<br>
+2) The Word Clearing Correction List is the list to use when
+any form of Word Clearing runs into real trouble. Any and all troubles with Word
+Clearing should be corrected by assessing and handling this list. The WCCL has been
+designed to handle errors made in Word Clearing. It is not to be used to try to
+correct study or the person's case. It is used in in context with Word Clearing actions to correct Word
+Clearing errors only.</font></p>
+<p><font face="Arial" size="2">Word Clearing Methods<br>
+Different techniques for locating and handling ( clearing) misunderstood
+words. There are nine methods of word clearing. They are listed below:</font></p>
+<p><font face="Arial" size="2">Word Clearing Intensive (method 1: M1: Method
+One:),&nbsp;<br>
+ 1. by meter in session. A full Assessment of many,
+many subjects is done. The auditor then takes each reading subject and clears the
+Chain back to earlier
+words and or words in earlier
+subjects until he gets an F/N. 2. assess, take the reading items from
+the best read on down and with E/S pull each one to F/N. Get each word you find
+to F/N. There can be many F/Ns per subject. End off with a win on the
+subject.&nbsp; 3. the action taken to clean up all misunderstoods in
+every subject one has studied. It is done by a word clearing auditor. The result
+of a properly done Word Clearing Intensive is the recovery of one's
+education. Abbr. M1.<br>
+<br>
+</font><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2">
+Word Clearing Method Two: (Method 2: M2:),&nbsp;<br>
+ 1. by meter in classroom. The earlier passage is
+read by the student while on a Meter and the misunderstood word is found. Then
+it is fully defined by dictionary. The word is then used several times in
+sentences of the student's own verbal composing. The misunderstood area is
+then reread until understood.&nbsp; 2. (M2) means word clearing Method 2. A method of locating and handling misunderstood words, using a Meter, in
+which the student reads aloud from written materials and each reading word
+cleared.&nbsp; 3. Method 2 is done with the pc reading the materials
+aloud and each reading word is taken to F/N before re-reading the relevant
+section and proceeding. Abbr.M2.<br>
+<br>
+Word Clearing Method Three:, (Method 3: M3:)<br>
+ 1. verbal in classroom. The student says he does not
+understand something. The supervisor has him look earlier in the text for a
+misunderstood word, gets the student to look it up, use it verbally several
+times in sentences of his own composition, then read the text that contained it.
+Then come forward in the text to the area of the subject he did not
+understand.&nbsp; 2. a method of word clearing used in the classroom
+where the misunderstood word is located and handled without the use of a Meter.
+In the study materials M3 means only word clearing Method 3.&nbsp; Abbr. M3.<br>
+<br>
+Word Clearing Method Four:, (M4:)&nbsp;<br>
+ 1. Method 4: fishes for the misunderstood word, finds
+it, clears it to F/N, looks for another in the area until there are no more with
+an F/N VGIs. Then moves to another area, handles that, eventually all
+misunderstoods that resulted in the cramming order or non-F/N student are
+handled. 2. a method of word clearing in which a Meter is used to rapidly
+locate any misunderstoods in a subject or section of materials. It is used in
+the classroom by the course supervisor.&nbsp; Abbr. M4.<br>
+<br>
+Word Clearing Method Five:, (Method 5: M5:)&nbsp;<br>
+ a system wherein the word clearer feeds words to the
+person and has him define each. It is called material clearing. Those the person
+cannot define must be looked up. This method is the method used to clear words
+or auditing commands or auditing lists.&nbsp; Abbr. M5<br>
+<br>
+Word Clearing Method Six:, (Method 6: M6:)&nbsp;<br>
+ is called key word clearing. It is used on posts and
+specific subjects. The word clearer makes a list of key (or most important)
+words relating to the person's duties or post or the new subject. The word
+clearer without showing the person the definitions, asks him to define each
+word. The word clearer checks the definition on his list for general
+correctness. Any slow or hesitancy or misdefinition is met with having the
+person look the word up. Abbr. M6.<br>
+<br>
+</font><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+<p><font face="Arial" size="2">
+Word Clearing Method Seven:, (Method 7: M7:)&nbsp;<br>
+ whenever one is working with children or
+foreign-language persons or semi-literates Method 7 Reading Aloud is used. The
+procedure is have him read aloud. Note each omission or word change or
+hesitation or frown as he reads and take it up at once. Correct it by looking it
+up for him or explaining it to him.&nbsp; Abbr. M7.<br>
+<br>
+Word Clearing <a name="Method Eight"> Method Eight</a>:, (Method 8: M8:)&nbsp;<br>
+Usually an alphabetical list of every word or term
+in the text of a paper, a chapter or a recorded tape is available or provided.
+The person looks up each word on the alphabetical list and uses each in
+sentences until he has the meaning conceptually.&nbsp;Method 8 is used in the Primary Rundown where one
+is studying study tech or where one is seeking a full grasp of a subject. Its
+end product is superliteracy. Abbr. M8.<br>
+<br>
+Word Clearing Method Nine:, (Method 9: M9:)&nbsp;<br>
+ the procedure is, (1) student or staff member reads
+the text out loud. He is not on the Meter. (2) the word clearer has a copy of
+the text and reads along with the student silently. (3) if the student leaves
+out a word or stumbles or exhibits any physical or verbal manifestation while
+reading the text, the word clearer immediately asks for the misunderstood word
+or term and gets the meanings cleared with a dictionary and put into sentences
+until the word is understood and VGIs are present.&nbsp;<br>
+<br>
+Word List:<br>
+ is simply a list of words taken from a body of data. A word
+list can be made for a tape lecture, a mimeo issue, a chapter of a book,
+etc. The word list contains all the words listed in alphabetical
+order.</font></p>
+<p><font face="Arial" size="2"><a name="Worksheets">Worksheet</a>: (W/S: WS:)
+<br>The sheets on which the auditor writes a complete running record of the session from beginning to end, page after page, as the session goes
+along.
+<br>
+</font>
+</p>
+<p><font face="Arial" size="2"><a name="Y">Y</a>:
+<br><br>
+<a name="Yellow Sheet">Yellow Sheet</a>:
+<br>A sheet detailing each correction list or set of commands which have been word cleared. It also lists the pc's current Havingness process and
+the type of cans the pc uses. It's kept in the pc folder inside the back
+flap.</font></p>
+
+
+
+<p><font face="Arial" size="1"><a href="#top">Top</a></font></p>
+
+
+
+<div align="center">
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#FFDB48">
+    <tr>
+      <td width="100%">
+        &nbsp;</td>
+    </tr>
+    <tr>
+      <td width="100%">
+        &nbsp;</td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+
+
+<p align="center"><font face="Arial Narrow" size="2">&nbsp;© 2003, Clearbird
+Publishing</font></p>
+
+</body>
+
+</html>
